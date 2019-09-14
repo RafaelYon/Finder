@@ -75,12 +75,15 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DAO\UserDAO.cs" />
     <Compile Include="Migrations\201909141950125_CreatedBasicDbStruct.cs" />
     <Compile Include="Migrations\201909141950125_CreatedBasicDbStruct.Designer.cs">
       <DependentUpon>201909141950125_CreatedBasicDbStruct.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Chat.cs" />
     <Compile Include="Models\Context.cs" />
+    <Compile Include="Models\IUpdateAt.cs" />
     <Compile Include="Models\Model.cs" />
     <Compile Include="Models\PreferenceType.cs" />
     <Compile Include="Models\PreferenceValue.cs" />
@@ -119,9 +122,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAO\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="Views\Login.xaml">
       <SubType>Designer</SubType>
