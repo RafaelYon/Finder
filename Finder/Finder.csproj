@@ -76,6 +76,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DAO\UserDAO.cs" />
+    <Compile Include="Exceptions\DuplicateKeyException.cs" />
+    <Compile Include="Exceptions\SqlException.cs" />
+    <Compile Include="Helpers\DbExceptionsHandler.cs" />
     <Compile Include="Helpers\Validator.cs" />
     <Compile Include="Migrations\201909141950125_CreatedBasicDbStruct.cs" />
     <Compile Include="Migrations\201909141950125_CreatedBasicDbStruct.Designer.cs">
@@ -85,11 +88,17 @@
     <Compile Include="Migrations\201909202252009_AddedMatchUsersRelationship.Designer.cs">
       <DependentUpon>201909202252009_AddedMatchUsersRelationship.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909211615487_RemovedSimpleEmailIndexFromUsersTable.cs" />
+    <Compile Include="Migrations\201909211615487_RemovedSimpleEmailIndexFromUsersTable.Designer.cs">
+      <DependentUpon>201909211615487_RemovedSimpleEmailIndexFromUsersTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909211617191_AddUniqueConstraintToEmailOfUsersTable.cs" />
+    <Compile Include="Migrations\201909211617191_AddUniqueConstraintToEmailOfUsersTable.Designer.cs">
+      <DependentUpon>201909211617191_AddUniqueConstraintToEmailOfUsersTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Chat.cs" />
     <Compile Include="Models\Context.cs" />
     <Compile Include="Models\IUpdateAt.cs" />
-    <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Model.cs" />
     <Compile Include="Models\PreferenceType.cs" />
     <Compile Include="Models\PreferenceValue.cs" />
@@ -118,6 +127,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909202252009_AddedMatchUsersRelationship.resx">
       <DependentUpon>201909202252009_AddedMatchUsersRelationship.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909211615487_RemovedSimpleEmailIndexFromUsersTable.resx">
+      <DependentUpon>201909211615487_RemovedSimpleEmailIndexFromUsersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909211617191_AddUniqueConstraintToEmailOfUsersTable.resx">
+      <DependentUpon>201909211617191_AddUniqueConstraintToEmailOfUsersTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

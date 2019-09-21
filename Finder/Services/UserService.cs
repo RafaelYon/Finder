@@ -2,6 +2,8 @@
 using Finder.Helpers;
 using Finder.Models;
 using System;
+using System.Data.Entity.Infrastructure;
+using System.Data.SqlClient;
 
 namespace Finder.Services
 {
@@ -14,10 +16,11 @@ namespace Finder.Services
         /// </summary>
         /// <param name="email">E-mail do usuário</param>
         /// <param name="password">Senha do usuário</param>
+		/// <exception cref="ArgumentException">Quando o e-mail ou a senha são inválidos</exception>
         /// <exception cref="Exception">Quando as credencais são inválidas</exception>
         public static void Login(string email, string password)
         {
-			Validator.CheckIsEmpty(email, "Email");
+			Validator.CheckIsValidEMail(email, "Email");
 			Validator.CheckIsEmpty(password, "Senha");
 
             var user = UserDAO.FindByEmail(email);
@@ -45,19 +48,40 @@ namespace Finder.Services
             return loggedUser;
         }
 
-        public static void Register(string name, string email, 
+		/// <summary>
+		/// Registra um novo usuário, este método já "loga" o usuário
+		/// </summary>
+		/// <param name="email">E-mail do usuário</param>
+		/// <param name="password">Senha do usuário</param>
+		/// <exception cref="ArgumentException">Quando o e-mail ou a senha são inválidos</exception>
+		/// <exception cref="Exception">Quando não foi possível inserir o novo registro</exception>
+		public static void Register(string name, string email, 
             string password)
         {
             Validator.CheckIsEmpty(name, "Nome");
             Validator.CheckIsValidEMail(email, "Email");
             Validator.CheckIsEmpty(password, "Senha");
 
-			UserDAO.Save(new User
+			try
 			{
-				Name = name,
-				Email = email,
-				Password = password
-			});
+				var user = new User
+				{
+					Name = name,
+					Email = email,
+					Password = password
+				};
+
+				UserDAO.Save(user);
+				loggedUser = user;
+			}
+			catch (DbUpdateException ex)
+			{
+				throw DbExceptionsHandler.Handler(ex);
+			}
+			catch (Exception ex)
+			{
+				throw new Exception("Houve um problama ao salvar suas informações, por favor contate os desenvolvedores", ex);
+			}
         }
     }
 }

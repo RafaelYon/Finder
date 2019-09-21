@@ -7,7 +7,7 @@ namespace Finder.Helpers
     {
         private static void ThrowFieldExcetion(string field, string message)
         {
-            throw new Exception($"O campo \"{field}\" {message}.");
+            throw new ArgumentException($"O campo \"{field}\" {message}.");
         }
 
         public static void CheckIsEmpty(string data, string field)

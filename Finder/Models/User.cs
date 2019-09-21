@@ -11,7 +11,7 @@ namespace Finder.Models
 		[Column(TypeName = "VARCHAR")]
 		[StringLength(254)]
 		[Index(IsUnique = true)]
-        public string Email { get; set; }
+		public string Email { get; set; }
         public string Password { get; set; }
 
         public List<PreferenceValue> Preferences { get; set; }
