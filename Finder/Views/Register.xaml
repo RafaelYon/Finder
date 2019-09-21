@@ -1,0 +1,19 @@
+﻿<Window x:Class="Finder.Views.Register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Finder.Views"
+        mc:Ignorable="d"
+        Title="Cadastrar novo usuário" Height="480" Width="640" MaxHeight="480" MaxWidth="640">
+    <Grid>
+        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Height="23" Margin="236,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" UseLayoutRounding="False" TextChanged="TxtNome_TextChanged"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="236,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" TextChanged="TxtEmail_TextChanged"/>
+        <TextBox x:Name="txtSenha" HorizontalAlignment="Left" Height="23" Margin="236,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" TextChanged="TxtSenha_TextChanged"/>
+        <Label Content="Nome Completo:" HorizontalAlignment="Left" Margin="236,51,0,0" VerticalAlignment="Top" FontSize="16" VerticalContentAlignment="Center"/>
+        <Label Content="E-Mail:" HorizontalAlignment="Left" Margin="236,149,0,0" VerticalAlignment="Top" FontSize="16" VerticalContentAlignment="Center"/>
+        <Label Content="Senha:" HorizontalAlignment="Left" Margin="236,243,0,0" VerticalAlignment="Top" FontSize="16" VerticalContentAlignment="Center"/>
+        <Button x:Name="btnCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="267,359,0,0" VerticalAlignment="Top" Width="100" Height="35" Click="BtnCadastrar_Click"/>
+
+    </Grid>
+</Window>
