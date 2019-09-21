@@ -1,5 +1,6 @@
 ﻿using Finder.Models;
 using System;
+using System.Data.Entity;
 using System.Linq;
 
 namespace Finder.DAO
@@ -8,7 +9,17 @@ namespace Finder.DAO
 	{
 		public static void Save(User model)
 		{
-			Context.Instance.Users.Add(model);
+            model.UpdateDate();
+
+			if (model.Id == 0)
+			{
+				Context.Instance.Users.Add(model);
+			}
+			else
+			{
+				Context.Instance.Entry(model).State = EntityState.Modified;
+			}
+
 			Context.Instance.SaveChanges();
 		}
 

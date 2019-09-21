@@ -1,8 +1,14 @@
-﻿namespace Finder.Models
+﻿using System;
+
+namespace Finder.Models
 {
-	public class Chat : Model
-	{
-		public User FirstUser { get; set; }
-		public User SecondUser { get; set; }
-	}
+    public class Chat : Model
+    {
+        /// <summary>
+        /// O usuário que iniciou o chat
+        /// </summary>
+        public User FirstUser { get; set; }
+
+        public User SecondUser { get; set; }
+    }
 }
