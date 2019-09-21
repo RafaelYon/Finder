@@ -3,7 +3,6 @@ using Finder.Helpers;
 using Finder.Models;
 using System;
 using System.Data.Entity.Infrastructure;
-using System.Data.SqlClient;
 
 namespace Finder.Services
 {
@@ -47,6 +46,11 @@ namespace Finder.Services
 
             return loggedUser;
         }
+
+		public static void Loggout()
+		{
+			loggedUser = null;
+		}
 
 		/// <summary>
 		/// Registra um novo usuário, este método já "loga" o usuário

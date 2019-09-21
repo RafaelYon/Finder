@@ -96,6 +96,10 @@
     <Compile Include="Migrations\201909211617191_AddUniqueConstraintToEmailOfUsersTable.Designer.cs">
       <DependentUpon>201909211617191_AddUniqueConstraintToEmailOfUsersTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909211746468_AddedIndexToNameOfPreferenceTypeAndValue.cs" />
+    <Compile Include="Migrations\201909211746468_AddedIndexToNameOfPreferenceTypeAndValue.Designer.cs">
+      <DependentUpon>201909211746468_AddedIndexToNameOfPreferenceTypeAndValue.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context.cs" />
     <Compile Include="Models\IUpdateAt.cs" />
@@ -133,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909211617191_AddUniqueConstraintToEmailOfUsersTable.resx">
       <DependentUpon>201909211617191_AddUniqueConstraintToEmailOfUsersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909211746468_AddedIndexToNameOfPreferenceTypeAndValue.resx">
+      <DependentUpon>201909211746468_AddedIndexToNameOfPreferenceTypeAndValue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
