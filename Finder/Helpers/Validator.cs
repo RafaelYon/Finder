@@ -27,5 +27,11 @@ namespace Finder.Helpers
                 ThrowFieldExcetion(field, "não é um e-mail válido");
             }
         }
+        
+        public static void CheckEqualsPassword(string password, string confirm)
+        {
+            if (!password.Equals(confirm))
+                throw new Exception("Senhas incompatíveis");
+        }
     }
 }
