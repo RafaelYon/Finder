@@ -22,7 +22,6 @@ namespace Finder.Views
     public partial class Register : Window
     {
         private User user = new User();
-        
 
         public Register()
         {
@@ -46,9 +45,15 @@ namespace Finder.Views
 
         private void BtnCadastrar_Click(object sender, RoutedEventArgs e)
         {
+            
             if(user != null)
             {
-
+                UserDAO.Save(user);
+                MessageBox.Show("Cadastrado com sucesso!", "Sucesso", MessageBoxButton.OK);
+            }
+            else
+            {
+                MessageBox.Show("Nenhum campo deve estar vazio!", "Falha", MessageBoxButton.OK);
             }
         }
     }
