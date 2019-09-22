@@ -22,7 +22,7 @@ namespace Finder.Models
         public List<User> UsersMatched { get; set; }
 
         /// <summary>
-        /// Lista de usuário que deram match nest usuário
+        /// Lista de usuário que deram match neste usuário
         /// </summary>
         public List<User> MatchedUsers { get; set; }
 
@@ -30,6 +30,7 @@ namespace Finder.Models
         {
             Preferences = new List<PreferenceValue>();
             MatchedUsers = new List<User>();
+			UsersMatched = new List<User>();
         }
     }
 }
