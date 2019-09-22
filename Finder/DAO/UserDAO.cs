@@ -9,8 +9,6 @@ namespace Finder.DAO
 	{
 		public static void Save(User model)
 		{
-            model.UpdateDate();
-
 			if (model.Id == 0)
 			{
 				Context.Instance.Users.Add(model);
@@ -18,6 +16,7 @@ namespace Finder.DAO
 			else
 			{
 				Context.Instance.Entry(model).State = EntityState.Modified;
+				model.UpdateDate();
 			}
 
 			Context.Instance.SaveChanges();

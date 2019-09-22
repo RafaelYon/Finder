@@ -59,12 +59,13 @@ namespace Finder.Services
 		/// <param name="password">Senha do usuário</param>
 		/// <exception cref="ArgumentException">Quando o e-mail ou a senha são inválidos</exception>
 		/// <exception cref="Exception">Quando não foi possível inserir o novo registro</exception>
-	public static void Register(string name, string email, 
+		public static void Register(string name, string email, 
             string password, string pass)
         {
             Validator.CheckIsEmpty(name, "Nome");
             Validator.CheckIsValidEMail(email, "Email");
             Validator.CheckIsEmpty(password, "Senha");
+			Validator.CheckIsEmpty(pass, "Confirmar Senha");
             Validator.CheckEqualsPassword(password, pass);
 
 			try
