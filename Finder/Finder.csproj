@@ -108,6 +108,10 @@
     <Compile Include="Migrations\201909221502165_AddedChatStruct.Designer.cs">
       <DependentUpon>201909221502165_AddedChatStruct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909221812273_UpdateModelsToLazeLoad.cs" />
+    <Compile Include="Migrations\201909221812273_UpdateModelsToLazeLoad.Designer.cs">
+      <DependentUpon>201909221812273_UpdateModelsToLazeLoad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Chat.cs" />
     <Compile Include="Models\Context.cs" />
@@ -160,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909221502165_AddedChatStruct.resx">
       <DependentUpon>201909221502165_AddedChatStruct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909221812273_UpdateModelsToLazeLoad.resx">
+      <DependentUpon>201909221812273_UpdateModelsToLazeLoad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

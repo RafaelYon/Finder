@@ -10,7 +10,7 @@ namespace Finder.Models
 		[Index]
         public string Name { get; set; }
 
-		public PreferenceType PreferenceType { get; set; }
-		public List<User> Users { get; set; }
+		public virtual PreferenceType PreferenceType { get; set; }
+		public virtual List<User> Users { get; set; }
     }
 }
