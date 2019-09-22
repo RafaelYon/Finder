@@ -1,4 +1,5 @@
-﻿using Finder.Models;
+﻿using Finder.DAO;
+using Finder.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -8,6 +9,31 @@ namespace Finder.Repositories
 {
 	public class UserRepository
 	{
+		protected UserDAO _userDAO;
+		protected ChatDAO _chatDAO;
+
+		protected UserDAO UserDAO
+		{
+			get
+			{
+				if (_userDAO == null)
+					_userDAO = new UserDAO();
+
+				return _userDAO;
+			}
+		}
+
+		protected ChatDAO ChatDAO
+		{
+			get
+			{
+				if (_chatDAO == null)
+					_chatDAO = new ChatDAO();
+
+				return _chatDAO;
+			}
+		}
+		
 		/// <summary>
 		/// Obtém uma lista de usuários disponíveis para dar "Match"
 		/// </summary>
@@ -36,6 +62,35 @@ namespace Finder.Repositories
 				"GROUP BY [Users].[Id], [Users].[Name], [Users].[Email], [Users].[Password], [Users].[CreatedAt], [Users].[UpdatedAt] " +
 				"ORDER BY COUNT([Preferences].[PreferenceValue_Id]) DESC",
 				preferencesValues, excludeUserIds).ToList();
+		}
+
+		protected Chat GetChatByUsers(User a, User b)
+		{
+			return Context.Instance.Chats
+				.Where(x => (x.FirstUser == a && x.SecondUser == b) || (x.FirstUser == b && x.SecondUser == a))
+				.FirstOrDefault();
+		}
+
+		/// <summary>
+		/// Salva o match e cria um chat entre os usuário se ambos deram um match um no outro
+		/// </summary>
+		/// <param name="currentUser">O usuário que deu match</param>
+		/// <param name="usertToMatch">O usuário "alvo" do match</param>
+		public void CreateMatch(User currentUser, User usertToMatch)
+		{
+			UserDAO.SaveMatch(currentUser, usertToMatch);
+
+			if (currentUser.MatchedUsers.Contains(usertToMatch))
+			{
+				if (GetChatByUsers(currentUser, usertToMatch) == null)
+				{
+					ChatDAO.Save(new Chat
+					{
+						FirstUser = currentUser,
+						SecondUser = usertToMatch
+					});
+				}
+			}
 		}
 	}
 }

@@ -31,6 +31,11 @@ namespace Finder.DAO
 			SaveModel(model);
 		}
 
+		/// <summary>
+		/// Salva o match
+		/// </summary>
+		/// <param name="currentUser">O usuário que deu match</param>
+		/// <param name="usertToMatch">O usuário "alvo" do match</param>
 		public void SaveMatch(User currentUser, User usertToMatch)
 		{
 			if (currentUser.UsersMatched.Contains(usertToMatch))
