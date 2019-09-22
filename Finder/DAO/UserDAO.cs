@@ -74,5 +74,16 @@ namespace Finder.DAO
 				"ORDER BY COUNT([Preferences].[PreferenceValue_Id]) DESC",
 				preferencesValues, excludeUserIds).ToList();
 		}
+
+		public static void SaveMatch(User currentUser, User usertToMatch)
+		{
+			if (currentUser.UsersMatched.Contains(usertToMatch))
+			{
+				return;
+			}
+
+			currentUser.UsersMatched.Add(usertToMatch);
+			Save(currentUser);
+		}
 	}
 }

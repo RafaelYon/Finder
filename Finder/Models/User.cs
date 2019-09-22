@@ -6,7 +6,6 @@ namespace Finder.Models
 {
     public class User : Model
     {
-        public int Id { get; set; }
 		public string Name { get; set; }
 		[Column(TypeName = "VARCHAR")]
 		[StringLength(254)]
@@ -26,11 +25,40 @@ namespace Finder.Models
         /// </summary>
         public List<User> MatchedUsers { get; set; }
 
-        public User()
+		public List<Chat> Chats { get; set; }
+		public List<Message> Messages { get; set; }
+
+		public User()
         {
             Preferences = new List<PreferenceValue>();
             MatchedUsers = new List<User>();
 			UsersMatched = new List<User>();
         }
-    }
+
+		public override int GetHashCode()
+		{
+			return Id;
+		}
+
+		public bool Equals(User user)
+		{
+			if (user == null)
+				return false;
+
+			return user.Id == this.Id;
+		}
+
+		public override bool Equals(object obj)
+		{
+			if (obj == null)
+				return false;
+
+			User sameTypeObj = obj as User;
+
+			if (sameTypeObj == null)
+				return false;
+
+			return Equals(sameTypeObj);
+		}
+	}
 }

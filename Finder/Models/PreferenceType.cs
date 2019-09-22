@@ -6,7 +6,6 @@ namespace Finder.Models
 {
     public class PreferenceType : Model
     {
-        public int Id { get; set; }
 		[StringLength(150)]
 		[Index(IsUnique = true)]
         public string Name { get; set; }
