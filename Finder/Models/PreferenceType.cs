@@ -16,5 +16,31 @@ namespace Finder.Models
 		{
 			Values = new List<PreferenceValue>();
 		}
+
+		public override int GetHashCode()
+		{
+			return Id;
+		}
+
+		public bool Equals(PreferenceType p)
+		{
+			if (p == null)
+				return false;
+
+			return p.Id == this.Id;
+		}
+
+		public override bool Equals(object obj)
+		{
+			if (obj == null)
+				return false;
+
+			var sameTypeObj = obj as PreferenceType;
+
+			if (sameTypeObj == null)
+				return false;
+
+			return Equals(sameTypeObj);
+		}
 	}
 }

@@ -34,5 +34,10 @@ namespace Finder.DAO
 		{
 			Context.Instance.PreferenceTypes.Add(model as PreferenceType);
 		}
+
+		protected override void RemoveModelInDbSet(Model model)
+		{
+			Context.Instance.PreferenceTypes.Remove(model as PreferenceType);
+		}
 	}
 }

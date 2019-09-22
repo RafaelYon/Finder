@@ -13,5 +13,10 @@ namespace Finder.DAO
 		{
 			Context.Instance.Chats.Add(model as Chat);
 		}
+
+		protected override void RemoveModelInDbSet(Model model)
+		{
+			Context.Instance.Chats.Remove(model as Chat);
+		}
 	}
 }

@@ -53,7 +53,7 @@ namespace Finder.Models
 			if (obj == null)
 				return false;
 
-			User sameTypeObj = obj as User;
+			var sameTypeObj = obj as User;
 
 			if (sameTypeObj == null)
 				return false;
