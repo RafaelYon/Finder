@@ -9,7 +9,7 @@ namespace Finder.DAO
 	{
 		public PreferenceType GetByName(string name)
 		{
-			var result = Context.Instance.PreferenceTypes.Include("Values").FirstOrDefault(x => x.Name.Equals(name));
+			var result = Context.Instance.PreferenceTypes.FirstOrDefault(x => x.Name.Equals(name));
 
 			if (result == null)
 			{

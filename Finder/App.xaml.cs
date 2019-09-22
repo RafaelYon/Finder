@@ -18,20 +18,6 @@ namespace Finder
     {
         public App()
         {
-			//var favoriteMoveOptions = new PreferenceType
-			//{
-			//    Name = "Gênero de Filme"
-			//};
-
-			//var actionMovie = new PreferenceValue { Name = "Ação", PreferenceType = favoriteMoveOptions };
-			//var romnanceMovie = new PreferenceValue { Name = "Romance", PreferenceType = favoriteMoveOptions };
-
-			//favoriteMoveOptions.Values.Add(actionMovie);
-			//favoriteMoveOptions.Values.Add(romnanceMovie);
-
-			//User usr = new User();
-			//usr.Preferences.Add(actionMovie);
-			//usr.Preferences.Add(romnanceMovie);
         }
     }
 }

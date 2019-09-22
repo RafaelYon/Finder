@@ -13,20 +13,20 @@ namespace Finder.Models
 		public string Email { get; set; }
         public string Password { get; set; }
 
-        public List<PreferenceValue> Preferences { get; set; }
+        public virtual List<PreferenceValue> Preferences { get; set; }
 
         /// <summary>
         /// Lista de usuário que o usuário deu match
         /// </summary>
-        public List<User> UsersMatched { get; set; }
+        public virtual List<User> UsersMatched { get; set; }
 
         /// <summary>
         /// Lista de usuário que deram match neste usuário
         /// </summary>
-        public List<User> MatchedUsers { get; set; }
+        public virtual List<User> MatchedUsers { get; set; }
 
-		public List<Chat> Chats { get; set; }
-		public List<Message> Messages { get; set; }
+		public virtual List<Chat> Chats { get; set; }
+		public virtual List<Message> Messages { get; set; }
 
 		public User()
         {
