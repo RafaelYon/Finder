@@ -51,5 +51,10 @@ namespace Finder.DAO
 		{
 			Context.Instance.Users.Add(model as User);
 		}
+
+		protected override void RemoveModelInDbSet(Model model)
+		{
+			Context.Instance.Users.Remove(model as User);
+		}
 	}
 }

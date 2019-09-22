@@ -1,4 +1,5 @@
 ﻿using Finder.Models;
+using System;
 using System.Data.Entity;
 
 namespace Finder.DAO
@@ -7,19 +8,32 @@ namespace Finder.DAO
 	{
 		protected virtual void SaveModel(Model model)
 		{
-			if (model.Id == 0)
+			try
 			{
-				IncludeModelInDbSet(model);
-			}
-			else
-			{
-				Context.Instance.Entry(model).State = EntityState.Modified;
-				model.UpdateDate();
-			}
+				if (model.Id == 0)
+				{
+					IncludeModelInDbSet(model);
+				}
+				else
+				{
+					Context.Instance.Entry(model).State = EntityState.Modified;
+					model.UpdateDate();
+				}
 
-			Context.Instance.SaveChanges();
+				Context.Instance.SaveChanges();
+			}
+			catch (Exception ex)
+			{
+				if (model.Id == 0)
+				{
+					RemoveModelInDbSet(model);
+				}
+
+				throw ex;
+			}
 		}
 
+		protected abstract void RemoveModelInDbSet(Model model);
 		protected abstract void IncludeModelInDbSet(Model model);
 	}
 }
