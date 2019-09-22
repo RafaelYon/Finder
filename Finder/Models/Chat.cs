@@ -7,6 +7,6 @@ namespace Finder.Models
 		public User FirstUser { get; set; }
 		public User SecondUser { get; set; }
 
-		public List<Message> Messages { get; set; }
+		public virtual List<Message> Messages { get; set; }
 	}
 }

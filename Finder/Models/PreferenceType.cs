@@ -10,7 +10,7 @@ namespace Finder.Models
 		[Index(IsUnique = true)]
         public string Name { get; set; }
 
-        public List<PreferenceValue> Values { get; set; }
+        public virtual List<PreferenceValue> Values { get; set; }
 
 		public PreferenceType()
 		{

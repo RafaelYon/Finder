@@ -56,7 +56,7 @@ namespace Finder.Repositories
 
 			return Context.Instance.Database.SqlQuery<User>(
 				"SELECT [Users].[Id], [Users].[Name], [Users].[Email], [Users].[Password], [Users].[CreatedAt], [Users].[UpdatedAt] " +
-				"FROM [dbo].[Users] AS [Users] INNER JOIN [dbo].[UserPreferenceValues] AS [Preferences] " +
+				"FROM [dbo].[Users] AS [Users] INNER JOIN [dbo].[PreferenceValueUsers] AS [Preferences] " +
 				"ON [Users].[Id] = [Preferences].[User_id] AND [Preferences].[PreferenceValue_Id] IN (@preferencesValues) " +
 				"AND [Preferences].[User_id] NOT IN (@excludeUserIds) " +
 				"GROUP BY [Users].[Id], [Users].[Name], [Users].[Email], [Users].[Password], [Users].[CreatedAt], [Users].[UpdatedAt] " +
