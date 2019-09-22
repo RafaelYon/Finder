@@ -10,6 +10,19 @@ namespace Finder.Services
     {
         private static User loggedUser;
 
+		private static UserDAO _userDAO;
+
+		private static UserDAO UserDAO
+		{
+			get
+			{
+				if (_userDAO == null)
+					_userDAO = new UserDAO();
+
+				return _userDAO;
+			}
+		}
+
         /// <summary>
         /// Realiza o login do usuário
         /// </summary>

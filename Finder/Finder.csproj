@@ -75,6 +75,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DAO\ChatDAO.cs" />
+    <Compile Include="DAO\IModelDAO.cs" />
+    <Compile Include="DAO\ModelDAO.cs" />
     <Compile Include="DAO\PreferenceTypeDAO.cs" />
     <Compile Include="DAO\UserDAO.cs" />
     <Compile Include="Exceptions\DuplicateKeyException.cs" />
@@ -113,6 +116,7 @@
     <Compile Include="Models\Model.cs" />
     <Compile Include="Models\PreferenceType.cs" />
     <Compile Include="Models\PreferenceValue.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="Views\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>

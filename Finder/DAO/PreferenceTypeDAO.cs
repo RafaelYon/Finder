@@ -1,31 +1,13 @@
 ﻿using Finder.Models;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 
 namespace Finder.DAO
 {
-	public static class PreferenceTypeDAO
+	public class PreferenceTypeDAO : ModelDAO, IDAO<PreferenceType>
 	{
-		public static void Save(PreferenceType model)
-		{
-			model.UpdateDate();
-
-			if (model.Id == 0)
-			{
-				Context.Instance.PreferenceTypes.Add(model);
-			}
-			else
-			{
-				model.UpdateDate();
-				Context.Instance.Entry(model).State = EntityState.Modified;
-			}
-
-			Context.Instance.SaveChanges();
-		}
-
-		public static PreferenceType GetByName(string name)
+		public PreferenceType GetByName(string name)
 		{
 			var result = Context.Instance.PreferenceTypes.Include("Values").FirstOrDefault(x => x.Name.Equals(name));
 
@@ -37,10 +19,20 @@ namespace Finder.DAO
 			return result;
 		}
 
-		public static List<PreferenceType> SearchByName(string name)
+		public List<PreferenceType> SearchByName(string name)
 			=> Context.Instance.PreferenceTypes.Where(x => x.Name.Contains(name)).ToList();
 
-		public static List<PreferenceType> GetAll()
+		public List<PreferenceType> GetAll()
 			=> Context.Instance.PreferenceTypes.ToList();
+
+		public void Save(PreferenceType model)
+		{
+			SaveModel(model);
+		}
+
+		protected override void IncludeModelInDbSet(Model model)
+		{
+			Context.Instance.PreferenceTypes.Add(model as PreferenceType);
+		}
 	}
 }
