@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Finder.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,31 @@ namespace Finder.Views
         public Login()
         {
             InitializeComponent();
+        }
+
+        private void BtnLogIn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                UserService.Login(txtEmail.Text, passwordBox.Password);
+                Redirect(new Message());
+            } catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Falha ao entrar!", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+
+            
+        }
+
+        private void BtnSingUp_Click(object sender, RoutedEventArgs e)
+        {
+            Redirect(new Register());
+        }
+
+        private void Redirect(Window newWindow)
+        {
+            newWindow.Show();
+            this.Close();
         }
     }
 }

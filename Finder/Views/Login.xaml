@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Finder.Views"
         mc:Ignorable="d"
-        Title="Login" Height="450" Width="800">
+        Title="Login" Height="235" Width="260">
     <Grid>
-        
+        <Label x:Name="lblEmail" Content="Email:" HorizontalAlignment="Left" Margin="33,19,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="26" Margin="33,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
+        <Label x:Name="lblPassword" Content="Senha:" HorizontalAlignment="Left" Margin="33,81,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.039,-1.077"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="33,112,0,0" VerticalAlignment="Top" Width="120" Height="26"/>
+        <Button x:Name="btnLogIn" Content="Entrar" HorizontalAlignment="Left" Margin="128,160,0,0" VerticalAlignment="Top" Width="75" Click="BtnLogIn_Click"/>
+        <Button x:Name="btnSingUp" Content="Cadastrar" HorizontalAlignment="Left" Margin="33,160,0,0" VerticalAlignment="Top" Width="75" Click="BtnSingUp_Click"/>
+
     </Grid>
 </Window>
