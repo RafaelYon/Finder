@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Finder.DAO;
+using Finder.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,5 +26,12 @@ namespace Finder.Views
             InitializeComponent();
         }
 
+        private void LbMatch_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            foreach(Chat chat in ChatDAO.)
+            {
+
+            }
+        }
     }
 }

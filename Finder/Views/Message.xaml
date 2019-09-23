@@ -12,13 +12,7 @@
             <ColumnDefinition Width="147*"/>
         </Grid.ColumnDefinitions>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="339" Margin="10,80,0,0" VerticalAlignment="Top" Width="224">
-            <ListView>
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn/>
-                    </GridView>
-                </ListView.View>
-            </ListView>
+            <ListBox x:Name="lbMatch" SelectionChanged="LbMatch_SelectionChanged"/>
         </Border>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="65" Margin="10,10,0,0" VerticalAlignment="Top" Width="224">
             <Button Content="Meu Perfil"/>

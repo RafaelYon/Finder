@@ -22,7 +22,7 @@ namespace Finder.Views
             }
             catch (Exception exception)
             {
-                MessageBox.Show(exception.Message, "Falha ao entrar", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show(exception.Message, "Falha ao registrar", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
