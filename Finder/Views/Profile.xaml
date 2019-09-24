@@ -16,7 +16,9 @@
         <TextBox x:Name="txtAltSenha" HorizontalAlignment="Left" Height="33" Margin="22,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="470"/>
         <Button x:Name="btnSalvarAlteracoes" Content="Salvar alterações" HorizontalAlignment="Left" Height="36" Margin="22,197,0,0" VerticalAlignment="Top" Width="176"/>
         <Label Content="Minhas Preferências" HorizontalAlignment="Left" Margin="10,251,0,0" VerticalAlignment="Top" Height="31" Width="284" FontSize="16" FontWeight="Bold"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="276" Margin="10,282,0,0" VerticalAlignment="Top" Width="832"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="276" Margin="10,282,0,0" VerticalAlignment="Top" Width="832">
+            <Label Content="Label" HorizontalAlignment="Left" Height="24" Margin="305,9,0,0" VerticalAlignment="Top" Width="220"/>
+        </Border>
         <Label Content="Cores Favoritas:" HorizontalAlignment="Left" Height="31" Margin="22,287,0,0" VerticalAlignment="Top" Width="202" FontSize="14"/>
         <ComboBox HorizontalAlignment="Left" Margin="22,318,0,0" VerticalAlignment="Top" Width="253" Height="28"/>
 

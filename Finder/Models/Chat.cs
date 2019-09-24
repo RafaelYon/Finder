@@ -1,13 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using Finder.Services;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Finder.Models
 {
 	public class Chat : Model
 	{
-		public User FirstUser { get; set; }
-		public User SecondUser { get; set; }
+        public virtual List<User> Users { get; set; }
 
-		public virtual List<Message> Messages { get; set; }
+        public virtual List<Message> Messages { get; set; }
 
 		public override int GetHashCode()
 		{
@@ -37,7 +38,7 @@ namespace Finder.Models
 
         public override string ToString()
         {
-            return SecondUser.Name;
+            return Users.Where(x => x.Id != UserService.GetLoggedUser().Id).FirstOrDefault().Name;
         }
     }
 }

@@ -66,9 +66,9 @@ namespace Finder.Repositories
 
 		protected Chat GetChatByUsers(User a, User b)
 		{
-			return Context.Instance.Chats
-				.Where(x => (x.FirstUser == a && x.SecondUser == b) || (x.FirstUser == b && x.SecondUser == a))
-				.FirstOrDefault();
+            return Context.Instance.Chats
+                .Where(x => x.Users.Intersect(new List<User> { a, b }).Count() == 2)
+                .FirstOrDefault();
 		}
 
 		/// <summary>
@@ -86,8 +86,10 @@ namespace Finder.Repositories
 				{
 					ChatDAO.Save(new Chat
 					{
-						FirstUser = currentUser,
-						SecondUser = usertToMatch
+						Users = new List<User>
+                        {
+                            currentUser, usertToMatch
+                        }
 					});
 				}
 			}

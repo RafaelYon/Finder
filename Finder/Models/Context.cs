@@ -23,7 +23,8 @@ namespace Finder.Models
         public DbSet<PreferenceType> PreferenceTypes { get; set; }
         public DbSet<PreferenceValue> PreferenceValues { get; set; }
 		public DbSet<Chat> Chats { get; set; }
+        public DbSet<Message> Messages { get; set; }
 
-		public Context() : base("FinderDB") { }
+        public Context() : base("FinderDB") { }
     }
 }
