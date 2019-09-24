@@ -21,14 +21,14 @@ namespace Finder.Views
         public Recomendation()
         {
             InitializeComponent();
-            users = (new UserRepository).GetUsersAvaliableToMatch(UserService.GetLoggedUser());
+            users = new UserRepository().GetUsersAvaliableToMatch(UserService.GetLoggedUser());
         }
 
         private void ChangeUserToRecomend()
         {
             currentUser = users[index++];
 
-            ListView.ItemsSourceProperty = currentUser.Preferences;
+            //ListView.ItemsSourceProperty = currentUser.Preferences;
         }
 
         private void BtnMatch_Click(object sender, RoutedEventArgs e)
