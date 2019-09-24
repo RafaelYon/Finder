@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Finder.Views"
         mc:Ignorable="d"
-        Title="Recomendation" Height="260" Width="320">
+        Title="Recomendation" Height="300" Width="474">
     <Grid>
-        <Rectangle Fill="White" HorizontalAlignment="Left" Height="77" Stroke="Black" VerticalAlignment="Top" Width="312"/>
-        <Label x:Name="label" Content="Principais recomendações" HorizontalAlignment="Left" Margin="83,23,0,0" VerticalAlignment="Top"/>
+        <Rectangle Fill="White" HorizontalAlignment="Left" Height="77" Stroke="Black" VerticalAlignment="Top" Width="466"/>
+        <Label x:Name="label" Content="Principais recomendações" HorizontalAlignment="Left" Margin="173,10,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="128,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="lblName" Content="Nome:" HorizontalAlignment="Left" Margin="45,92,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnMatch" Content="Gostei" HorizontalAlignment="Left" Margin="173,157,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnMatch" Content="Gostei" HorizontalAlignment="Left" Margin="173,157,0,0" VerticalAlignment="Top" Width="75" Click="BtnMatch_Click"/>
         <Button x:Name="btnDecline" Content="Não Gostei" HorizontalAlignment="Left" Margin="45,157,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Window>
