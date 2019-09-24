@@ -1,0 +1,24 @@
+﻿<Window x:Class="Finder.Views.Profile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Finder.Views"
+        mc:Ignorable="d"
+        Title="Profile" Height="640" Width="860">
+    <Grid>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="207" Margin="10,39,0,0" VerticalAlignment="Top" Width="832">
+            <Label Content="Novo E-Mail:" HorizontalAlignment="Left" Height="28" Margin="9,9,0,0" VerticalAlignment="Top" Width="203" FontSize="14"/>
+        </Border>
+        <Label Content="Meus Dados" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="29" Width="221" FontSize="16" FontStretch="ExtraExpanded" FontWeight="Bold"/>
+        <TextBox x:Name="txtAltEmail" HorizontalAlignment="Left" Height="33" Margin="22,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" FontSize="19"/>
+        <Label Content="Nova Senha:" HorizontalAlignment="Left" Height="32" Margin="22,127,0,0" VerticalAlignment="Top" Width="212" FontSize="14"/>
+        <TextBox x:Name="txtAltSenha" HorizontalAlignment="Left" Height="33" Margin="22,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="470"/>
+        <Button x:Name="btnSalvarAlteracoes" Content="Salvar alterações" HorizontalAlignment="Left" Height="36" Margin="22,197,0,0" VerticalAlignment="Top" Width="176"/>
+        <Label Content="Minhas Preferências" HorizontalAlignment="Left" Margin="10,251,0,0" VerticalAlignment="Top" Height="31" Width="284" FontSize="16" FontWeight="Bold"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="276" Margin="10,282,0,0" VerticalAlignment="Top" Width="832"/>
+        <Label Content="Cores Favoritas:" HorizontalAlignment="Left" Height="31" Margin="22,287,0,0" VerticalAlignment="Top" Width="202" FontSize="14"/>
+        <ComboBox HorizontalAlignment="Left" Margin="22,318,0,0" VerticalAlignment="Top" Width="253" Height="28"/>
+
+    </Grid>
+</Window>

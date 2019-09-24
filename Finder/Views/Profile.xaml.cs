@@ -1,5 +1,4 @@
-﻿using Finder.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,19 +15,13 @@ using System.Windows.Shapes;
 namespace Finder.Views
 {
     /// <summary>
-    /// Interaction logic for Message.xaml
+    /// Interaction logic for Profile.xaml
     /// </summary>
-    public partial class Message : Window
+    public partial class Profile : Window
     {
-        public Message()
+        public Profile()
         {
             InitializeComponent();
-            lbMatch.ItemsSource = UserService.GetLoggedUser().Chats;
-        }
-
-        private void LbMatch_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            
         }
     }
 }

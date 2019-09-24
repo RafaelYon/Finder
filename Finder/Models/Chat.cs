@@ -34,5 +34,10 @@ namespace Finder.Models
 
 			return Equals(sameTypeObj);
 		}
-	}
+
+        public override string ToString()
+        {
+            return SecondUser.Name;
+        }
+    }
 }
