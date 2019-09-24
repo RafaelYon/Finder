@@ -7,13 +7,13 @@ namespace Finder.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class AddedChatStruct : IMigrationMetadata
+    public sealed partial class AddChatStruct : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedChatStruct));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddChatStruct));
         
         string IMigrationMetadata.Id
         {
-            get { return "201909221502165_AddedChatStruct"; }
+            get { return "201909240139208_AddChatStruct"; }
         }
         
         string IMigrationMetadata.Source

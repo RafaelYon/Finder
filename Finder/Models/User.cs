@@ -25,8 +25,8 @@ namespace Finder.Models
         /// </summary>
         public virtual List<User> MatchedUsers { get; set; }
 
-		public virtual List<Chat> Chats { get; set; }
-		public virtual List<Message> Messages { get; set; }
+        public virtual List<Chat> Chats { get; set; }
+        public virtual List<Message> Messages { get; set; }
 
 		public User()
         {

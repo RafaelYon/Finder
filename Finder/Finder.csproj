@@ -105,13 +105,9 @@
     <Compile Include="Migrations\201909211746468_AddedIndexToNameOfPreferenceTypeAndValue.Designer.cs">
       <DependentUpon>201909211746468_AddedIndexToNameOfPreferenceTypeAndValue.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201909221502165_AddedChatStruct.cs" />
-    <Compile Include="Migrations\201909221502165_AddedChatStruct.Designer.cs">
-      <DependentUpon>201909221502165_AddedChatStruct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909221812273_UpdateModelsToLazeLoad.cs" />
-    <Compile Include="Migrations\201909221812273_UpdateModelsToLazeLoad.Designer.cs">
-      <DependentUpon>201909221812273_UpdateModelsToLazeLoad.cs</DependentUpon>
+    <Compile Include="Migrations\201909240139208_AddChatStruct.cs" />
+    <Compile Include="Migrations\201909240139208_AddChatStruct.Designer.cs">
+      <DependentUpon>201909240139208_AddChatStruct.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Chat.cs" />
@@ -166,11 +162,8 @@
     <EmbeddedResource Include="Migrations\201909211746468_AddedIndexToNameOfPreferenceTypeAndValue.resx">
       <DependentUpon>201909211746468_AddedIndexToNameOfPreferenceTypeAndValue.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909221502165_AddedChatStruct.resx">
-      <DependentUpon>201909221502165_AddedChatStruct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909221812273_UpdateModelsToLazeLoad.resx">
-      <DependentUpon>201909221812273_UpdateModelsToLazeLoad.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201909240139208_AddChatStruct.resx">
+      <DependentUpon>201909240139208_AddChatStruct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
