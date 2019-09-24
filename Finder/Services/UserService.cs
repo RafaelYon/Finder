@@ -8,13 +8,13 @@ namespace Finder.Services
 {
     public static class UserService
     {
-        private static User loggedUser;
-
+        private static User loggedUser; // Atribuido quando o login e bem sucedido
+  
 		private static UserDAO _userDAO;
 
 		private static UserDAO UserDAO
 		{
-			get
+			get // Verifica se ja foi instanciado
 			{
 				if (_userDAO == null)
 					_userDAO = new UserDAO();

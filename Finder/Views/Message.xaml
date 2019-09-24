@@ -18,7 +18,7 @@
             <Button Content="Meu Perfil"/>
         </Border>
         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="308" Margin="10,10,0,0" VerticalAlignment="Top" Width="568">
-            <ListView>
+            <ListView x:Name="lvChat">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn/>
@@ -27,7 +27,7 @@
             </ListView>
         </Border>
         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="96" Margin="10,323,0,0" VerticalAlignment="Top" Width="463">
-            <TextBox TextWrapping="Wrap"/>
+            <TextBox x:Name="txtChat" TextWrapping="Wrap" TextChanged="TextBox_TextChanged"/>
         </Border>
         <Button Content="Enviar" HorizontalAlignment="Left" Height="96" Margin="478,323,0,0" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
 
