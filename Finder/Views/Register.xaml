@@ -10,12 +10,13 @@
         <Label Content="Nome Completo:" HorizontalAlignment="Left" Margin="94,32,0,0" VerticalAlignment="Top" FontSize="16" VerticalContentAlignment="Center"/>
         <Label Content="E-Mail:" HorizontalAlignment="Left" Margin="94,99,0,0" VerticalAlignment="Top" FontSize="16" VerticalContentAlignment="Center" RenderTransformOrigin="0.595,0.177"/>
         <Label x:Name="lblPassword" Content="Senha:" HorizontalAlignment="Left" Margin="94,166,0,0" VerticalAlignment="Top" FontSize="16" VerticalContentAlignment="Center" RenderTransformOrigin="-1.158,0.565"/>
-        <Button x:Name="btnRegister" Content="Cadastrar" HorizontalAlignment="Left" Margin="164,310,0,0" VerticalAlignment="Top" Width="100" Height="34" Click="BtnRegister_Click" RenderTransformOrigin="-0.55,0.029"/>
-        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="94,202,0,0" VerticalAlignment="Top" Width="170" Height="26"/>
+        <Button x:Name="btnRegister" Content="Cadastrar" HorizontalAlignment="Left" Margin="164,310,0,0" VerticalAlignment="Top" Width="100" Height="34" Click="BtnRegister_Click" RenderTransformOrigin="-0.55,0.029" TabIndex="5"/>
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="94,202,0,0" VerticalAlignment="Top" Width="120" Height="26" TabIndex="3"/>
         <Label x:Name="lblPass" Content="Confirmar Senha:" HorizontalAlignment="Left" Margin="94,233,0,0" VerticalAlignment="Top" Width="170" Height="32" FontSize="16"/>
-        <PasswordBox x:Name="txtPass" HorizontalAlignment="Left" Margin="94,265,0,0" VerticalAlignment="Top" Width="170" Height="26"/>
-        <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="26" Margin="94,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
-        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="26" Margin="94,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
+        <PasswordBox x:Name="txtPass" HorizontalAlignment="Left" Margin="94,265,0,0" VerticalAlignment="Top" Width="120" Height="26" TabIndex="4"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="26" Margin="94,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" TabIndex="1"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="26" Margin="94,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" TabIndex="2"/>
+        <Button x:Name="btnReturn" Content="Voltar" HorizontalAlignment="Left" Margin="94,310,0,0" VerticalAlignment="Top" Width="57" Height="34" TabIndex="6" Click="BtnReturn_Click"/>
 
     </Grid>
 </Window>

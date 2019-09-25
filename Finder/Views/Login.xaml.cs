@@ -30,7 +30,9 @@ namespace Finder.Views
             try
             {
                 UserService.Login(txtEmail.Text, passwordBox.Password);
-                Redirect(new Message());
+                Recomendation asdf = new Recomendation();
+                asdf.Show();
+                this.Close();
             } catch (Exception exception)
             {
                 MessageBox.Show(exception.Message, "Falha ao entrar!", MessageBoxButton.OK, MessageBoxImage.Warning);

@@ -19,6 +19,7 @@ namespace Finder.Views
             try
             {
                 UserService.Register(txtName.Text, txtEmail.Text, txtPassword.Password, txtPass.Password);
+                ViewRedirecter(new Profile());
             }
             catch (Exception exception)
             {
@@ -26,5 +27,15 @@ namespace Finder.Views
             }
         }
 
+        private void BtnReturn_Click(object sender, RoutedEventArgs e)
+        {
+            ViewRedirecter(new Login());
+        }
+
+        private void ViewRedirecter(Window newWindow)
+        {
+            newWindow.Show();
+            this.Close();
+        }
     }
 }
