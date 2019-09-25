@@ -43,7 +43,7 @@ namespace Finder.DAO
 				return;
 			}
 
-			currentUser.UsersMatched.Add(usertToMatch);
+			currentUser.UsersMatched.Add(Context.Instance.Users.Find(usertToMatch.Id));
 			Save(currentUser);
 		}
 
