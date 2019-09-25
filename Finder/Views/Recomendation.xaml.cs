@@ -1,11 +1,9 @@
-﻿using Finder.DAO;
-using Finder.Models;
+﻿using Finder.Models;
 using Finder.Repositories;
 using Finder.Services;
 using System;
 using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Controls;
 
 namespace Finder.Views
 {
@@ -17,24 +15,52 @@ namespace Finder.Views
         private List<User> users;
         private User currentUser;
         private int index = 0;
-
+        private UserRepository userRepository;
         public Recomendation()
         {
+            userRepository = new UserRepository();
             InitializeComponent();
-            users = (new UserRepository).GetUsersAvaliableToMatch(UserService.GetLoggedUser());
+            try
+            {
+                users = userRepository.GetUsersAvaliableToMatch(UserService.GetLoggedUser());
+                ChangeUserToRecomend();
+            } catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Preferências", MessageBoxButton.OK, MessageBoxImage.Information);
+            }            
         }
 
         private void ChangeUserToRecomend()
         {
-            currentUser = users[index++];
+            try
+            {
+                CheckLastIndex();
+            } catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Recomendação", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
 
-            ListView.ItemsSourceProperty = currentUser.Preferences;
+        private void CheckLastIndex()
+        {
+            if (users.Count == index)
+            {
+                throw new Exception("Não há mais recomendações!");
+            }
+
+            currentUser = users[index++];
+            txtName.Text = currentUser.Name;
         }
 
         private void BtnMatch_Click(object sender, RoutedEventArgs e)
         {
             // Adiciona o metodo
-            new UserRepository().CreateMatch(UserService.GetLoggedUser(), currentUser);
+            userRepository.CreateMatch(UserService.GetLoggedUser(), currentUser);
+            ChangeUserToRecomend();      
+        }
+
+        private void BtnDecline_Click(object sender, RoutedEventArgs e)
+        {
             ChangeUserToRecomend();
         }
     }
