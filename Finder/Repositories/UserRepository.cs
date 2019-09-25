@@ -49,20 +49,19 @@ namespace Finder.Repositories
 			var usersIdsToExclude = new List<int>(user.UsersMatched.Select(x => x.Id));
 			usersIdsToExclude.Add(user.Id);
 
-			var preferencesValues = new SqlParameter("@preferencesValues",
-				string.Join(", ", user.Preferences.Select(x => x.Id.ToString())));
-			var excludeUserIds = new SqlParameter("@excludeUserIds",
-				string.Join(", ", usersIdsToExclude.Select(x => x.ToString())));
+			var preferencesValues = string.Join(", ", user.Preferences.Select(x => x.Id.ToString()));
+			var excludeUserIds = string.Join(", ", usersIdsToExclude.Select(x => x.ToString()));
 
-			return Context.Instance.Database.SqlQuery<User>(
+			var result = Context.Instance.Database.SqlQuery<User>(
 				"SELECT [Users].[Id], [Users].[Name], [Users].[Email], [Users].[Password], [Users].[CreatedAt], [Users].[UpdatedAt] " +
 				"FROM [dbo].[Users] AS [Users] INNER JOIN [dbo].[PreferenceValueUsers] AS [Preferences] " +
-				"ON [Users].[Id] = [Preferences].[User_id] AND [Preferences].[PreferenceValue_Id] IN (@preferencesValues) " +
-				"AND [Preferences].[User_id] NOT IN (@excludeUserIds) " +
+				"ON [Users].[Id] = [Preferences].[User_id] AND [Preferences].[PreferenceValue_Id] IN (" + preferencesValues + ") " +
+				"AND [Preferences].[User_id] NOT IN (" + excludeUserIds + ") " +
 				"GROUP BY [Users].[Id], [Users].[Name], [Users].[Email], [Users].[Password], [Users].[CreatedAt], [Users].[UpdatedAt] " +
-				"ORDER BY COUNT([Preferences].[PreferenceValue_Id]) DESC",
-				preferencesValues, excludeUserIds).ToList();
-		}
+				"ORDER BY COUNT([Preferences].[PreferenceValue_Id]) DESC").ToList();
+
+            return result;
+        }
 
 		protected Chat GetChatByUsers(User a, User b)
 		{
