@@ -1,10 +1,20 @@
-﻿namespace Finder.Models
+﻿using Finder.Services;
+
+namespace Finder.Models
 {
 	public class Message : Model
 	{
 		public Chat Chat { get; set; }
 		public User User { get; set; }
 		public string Text { get; set; }
+
+        public Message() { }
+
+        public Message(string message)
+        {
+            User = UserService.GetLoggedUser();
+            Text = message;
+        }
 
 		public override int GetHashCode()
 		{
@@ -31,5 +41,10 @@
 
 			return Equals(sameTypeObj);
 		}
-	}
+
+        public override string ToString()
+        {
+            return $"[{User.Name}]: {Text} ({CreatedAt})";
+        }
+    }
 }

@@ -27,9 +27,9 @@
             </ListView>
         </Border>
         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Left" Height="96" Margin="10,323,0,0" VerticalAlignment="Top" Width="463">
-            <TextBox x:Name="txtChat" TextWrapping="Wrap" TextChanged="TextBox_TextChanged"/>
+            <TextBox x:Name="txtChat" TextWrapping="Wrap" IsEnabled="False"/>
         </Border>
-        <Button Content="Enviar" HorizontalAlignment="Left" Height="96" Margin="478,323,0,0" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
+        <Button x:Name="btnSend" Content="Enviar" HorizontalAlignment="Left" Height="96" Margin="478,323,0,0" VerticalAlignment="Top" Width="100" Grid.Column="1" IsEnabled="False" Click="BtnSend_Click"/>
 
     </Grid>
 </Window>
