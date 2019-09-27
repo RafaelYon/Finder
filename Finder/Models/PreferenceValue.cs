@@ -38,5 +38,10 @@ namespace Finder.Models
 
 			return Equals(sameTypeObj);
 		}
+
+        public virtual string ToString()
+        {
+            return Name;
+        }
 	}
 }

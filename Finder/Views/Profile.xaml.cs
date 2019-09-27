@@ -19,9 +19,30 @@ namespace Finder.Views
     /// </summary>
     public partial class Profile : Window
     {
+        private PreferenceTypeDAO preferenceTypeDAO;
+
         public Profile()
         {
             InitializeComponent();
+
+            preferenceTypeDAO = new PreferenceTypeDAO();
+
+
+            foreach (var preferenceType in preferenceTypeDAO.GetAll())
+            {
+                var combox = new ComboBox()
+                {
+                    ItemsSource = preferenceType.Values,
+                    Text = preferenceType.Name
+                };
+                var label = new Label()
+                {
+                    Content = preferenceType.Name,
+                    FontSize = 14
+                };
+                stpPreference.Children.Add(label);
+                stpPreference.Children.Add(combox);
+            }
         }
     }
 }
