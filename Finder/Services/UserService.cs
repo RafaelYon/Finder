@@ -28,7 +28,7 @@ namespace Finder.Services
         /// </summary>
         /// <param name="email">E-mail do usuário</param>
         /// <param name="password">Senha do usuário</param>
-		/// <exception cref="ArgumentException">Quando o e-mail ou a senha são inválidos</exception>
+        /// <exception cref="ArgumentException">Quando o e-mail ou a senha são inválidos</exception>
         /// <exception cref="Exception">Quando as credencais são inválidas</exception>
         public static void Login(string email, string password)
         {
@@ -73,13 +73,14 @@ namespace Finder.Services
 		/// <exception cref="ArgumentException">Quando o e-mail ou a senha são inválidos</exception>
 		/// <exception cref="Exception">Quando não foi possível inserir o novo registro</exception>
 		public static void Register(string name, string email, 
-            string password, string pass)
+            string password, string pass, DateTime? born, Genre genre)
         {
             Validator.CheckIsEmpty(name, "Nome");
             Validator.CheckIsValidEMail(email, "Email");
             Validator.CheckIsEmpty(password, "Senha");
 			Validator.CheckIsEmpty(pass, "Confirmar Senha");
             Validator.CheckEqualsPassword(password, pass);
+            Validator.CheckIsNull(born, "Data Nasc");
 
 			try
 			{
@@ -87,7 +88,9 @@ namespace Finder.Services
 				{
 					Name = name,
 					Email = email,
-					Password = password
+					Password = password,
+                    Born = born ?? DateTime.Now,
+                    Genre = genre
 				};
 
 				UserDAO.Save(user);

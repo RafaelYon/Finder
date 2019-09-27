@@ -27,6 +27,9 @@ namespace Finder.Views
             } catch (Exception exception)
             {
                 MessageBox.Show(exception.Message, "Preferências", MessageBoxButton.OK, MessageBoxImage.Information);
+                Profile frmProfile = new Profile();
+                frmProfile.Show();
+                this.Close();
             }            
         }
 

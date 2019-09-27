@@ -18,6 +18,14 @@ namespace Finder.Helpers
             }
         }
 
+        public static void CheckIsNull(object data, string field)
+        {
+            if (data == null)
+            {
+                ThrowFieldExcetion(field, "deve ser definido");
+            }
+        }
+
         public static void CheckIsValidEMail(string data, string field)
         {
             CheckIsEmpty(data, field);

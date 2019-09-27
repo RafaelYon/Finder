@@ -5,18 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Finder.Views"
         mc:Ignorable="d"
-        Title="Cadastrar novo usuário" Height="392" Width="390" MaxHeight="480" MaxWidth="640">
+        Title="Cadastrar novo usuário" Height="500" Width="390" MaxHeight="500" MaxWidth="640">
     <Grid>
-        <Label Content="Nome Completo:" HorizontalAlignment="Left" Margin="94,32,0,0" VerticalAlignment="Top" FontSize="16" VerticalContentAlignment="Center"/>
-        <Label Content="E-Mail:" HorizontalAlignment="Left" Margin="94,99,0,0" VerticalAlignment="Top" FontSize="16" VerticalContentAlignment="Center" RenderTransformOrigin="0.595,0.177"/>
-        <Label x:Name="lblPassword" Content="Senha:" HorizontalAlignment="Left" Margin="94,166,0,0" VerticalAlignment="Top" FontSize="16" VerticalContentAlignment="Center" RenderTransformOrigin="-1.158,0.565"/>
-        <Button x:Name="btnRegister" Content="Cadastrar" HorizontalAlignment="Left" Margin="164,310,0,0" VerticalAlignment="Top" Width="100" Height="34" Click="BtnRegister_Click" RenderTransformOrigin="-0.55,0.029" TabIndex="5"/>
-        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="94,202,0,0" VerticalAlignment="Top" Width="120" Height="26" TabIndex="3"/>
-        <Label x:Name="lblPass" Content="Confirmar Senha:" HorizontalAlignment="Left" Margin="94,233,0,0" VerticalAlignment="Top" Width="170" Height="32" FontSize="16"/>
-        <PasswordBox x:Name="txtPass" HorizontalAlignment="Left" Margin="94,265,0,0" VerticalAlignment="Top" Width="120" Height="26" TabIndex="4"/>
-        <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="26" Margin="94,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" TabIndex="1"/>
-        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="26" Margin="94,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" TabIndex="2"/>
-        <Button x:Name="btnReturn" Content="Voltar" HorizontalAlignment="Left" Margin="94,310,0,0" VerticalAlignment="Top" Width="57" Height="34" TabIndex="6" Click="BtnReturn_Click"/>
+        <Label Content="Nome Completo:" HorizontalAlignment="Left" Margin="16,10,0,0" VerticalAlignment="Top" FontSize="22" VerticalContentAlignment="Center"/>
+        <Label Content="E-Mail:" HorizontalAlignment="Left" Margin="16,87,0,0" VerticalAlignment="Top" FontSize="22" VerticalContentAlignment="Center" RenderTransformOrigin="0.595,0.177"/>
+        <Label x:Name="lblPassword" Content="Senha:" HorizontalAlignment="Left" Margin="16,164,0,0" VerticalAlignment="Top" FontSize="22" VerticalContentAlignment="Center" RenderTransformOrigin="-1.158,0.565"/>
+        <Button x:Name="btnRegister" Content="Cadastrar" HorizontalAlignment="Left" Margin="136,425,0,0" VerticalAlignment="Top" Width="110" Height="34" Click="BtnRegister_Click" RenderTransformOrigin="-0.55,0.029" TabIndex="8" FontSize="22"/>
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="16,208,0,0" VerticalAlignment="Top" Width="200" Height="28" TabIndex="3" FontSize="20"/>
+        <Label x:Name="lblPass" Content="Confirmar Senha:" HorizontalAlignment="Left" Margin="16,241,0,0" VerticalAlignment="Top" Width="176" Height="39" FontSize="22"/>
+        <PasswordBox x:Name="txtPass" HorizontalAlignment="Left" Margin="16,285,0,0" VerticalAlignment="Top" Width="200" Height="28" TabIndex="4" FontSize="20"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="28" Margin="16,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" TabIndex="1" FontSize="20"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="28" Margin="16,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" TabIndex="2" FontSize="20"/>
+        <Button x:Name="btnReturn" Content="Voltar" HorizontalAlignment="Left" Margin="16,425,0,0" VerticalAlignment="Top" Width="74" Height="34" TabIndex="9" Click="BtnReturn_Click" FontSize="22"/>
+        <RadioButton x:Name="rbMale" Content="Masculino" HorizontalAlignment="Left" Margin="82,329,0,0" VerticalAlignment="Top" FontSize="22" Checked="RbMale_Checked" TabIndex="5" IsChecked="True"/>
+        <RadioButton x:Name="rbFemale" Content="Feminino" HorizontalAlignment="Left" Margin="205,329,0,0" VerticalAlignment="Top" FontSize="22" Width="116" Checked="RbFemale_Checked" TabIndex="6"/>
+        <Label x:Name="lblGenre" Content="Sexo:" HorizontalAlignment="Left" Margin="16,318,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <DatePicker x:Name="dpborn" HorizontalAlignment="Left" Margin="154,372,0,0" VerticalAlignment="Top" FontSize="22" Text="5646" TextOptions.TextHintingMode="Fixed" Width="180" TabIndex="7"/>
+        <Label x:Name="lblBorn" Content="Data Nasc:" HorizontalAlignment="Left" Margin="16,372,0,0" VerticalAlignment="Top" FontSize="22" Width="116"/>
 
     </Grid>
 </Window>

@@ -1,3 +1,4 @@
+using Finder.Models;
 using Finder.Services;
 using System;
 using System.Windows;
@@ -14,11 +15,13 @@ namespace Finder.Views
             InitializeComponent();
         }
 
+        private Genre genre;
+
         private void BtnRegister_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                UserService.Register(txtName.Text, txtEmail.Text, txtPassword.Password, txtPass.Password);
+                UserService.Register(txtName.Text, txtEmail.Text, txtPassword.Password, txtPass.Password, dpborn.SelectedDate, genre);
                 ViewRedirecter(new Profile());
             }
             catch (Exception exception)
@@ -36,6 +39,16 @@ namespace Finder.Views
         {
             newWindow.Show();
             this.Close();
+        }
+
+        private void RbFemale_Checked(object sender, RoutedEventArgs e)
+        {
+            genre = Genre.Female;
+        }
+
+        private void RbMale_Checked(object sender, RoutedEventArgs e)
+        {
+            genre = Genre.Male;
         }
     }
 }

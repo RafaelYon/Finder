@@ -1,9 +1,16 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Finder.Models
 {
+    public enum Genre
+    {
+        Male,
+        Female
+    }
+
     public class User : Model
     {
 		public string Name { get; set; }
@@ -11,7 +18,9 @@ namespace Finder.Models
 		[StringLength(254)]
 		[Index(IsUnique = true)]
 		public string Email { get; set; }
-        public string Password { get; set; }
+        public string Password { get; set; }   
+        public DateTime Born { get; set; }
+        public Genre Genre { get; set; }
 
         public virtual List<PreferenceValue> Preferences { get; set; }
 

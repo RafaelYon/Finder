@@ -109,6 +109,10 @@
     <Compile Include="Migrations\201909240139208_AddChatStruct.Designer.cs">
       <DependentUpon>201909240139208_AddChatStruct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909262254530_addatachments.cs" />
+    <Compile Include="Migrations\201909262254530_addatachments.Designer.cs">
+      <DependentUpon>201909262254530_addatachments.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Chat.cs" />
     <Compile Include="Models\Context.cs" />
@@ -167,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909240139208_AddChatStruct.resx">
       <DependentUpon>201909240139208_AddChatStruct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909262254530_addatachments.resx">
+      <DependentUpon>201909262254530_addatachments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
