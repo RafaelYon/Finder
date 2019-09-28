@@ -7,18 +7,23 @@
         mc:Ignorable="d"
         Title="Profile" Height="480" Width="860" WindowStartupLocation="CenterScreen">
     <Grid Margin="0,0,0,-3">
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="150" Margin="10,10,0,0" VerticalAlignment="Top" Width="832"/>
-        <Label Content="Alterar dados" HorizontalAlignment="Left" Height="34" Margin="372,10,0,0" VerticalAlignment="Top" Width="116" FontWeight="Bold" FontSize="16"/>
-        <Label Content="Novo E-mail:" HorizontalAlignment="Left" Margin="24,48,0,0" VerticalAlignment="Top" Height="26" Width="190" FontSize="14"/>
-        <TextBox HorizontalAlignment="Left" Height="33" Margin="24,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="398"/>
-        <Label Content="Nova Senha:" HorizontalAlignment="Left" Margin="430,44,0,0" VerticalAlignment="Top" Height="26" Width="190" FontSize="14"/>
-        <TextBox HorizontalAlignment="Left" Height="33" Margin="430,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="398"/>
-        <Button Content="Salvar alterações" HorizontalAlignment="Left" Height="36" Margin="334,112,0,0" VerticalAlignment="Top" Width="192"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="150" Margin="10,10,0,0" VerticalAlignment="Top" Width="832">
+            
+        </Border>
+        <Label Content="Alterar dados" HorizontalAlignment="Left" Height="34" Margin="372,10,0,0" VerticalAlignment="Top" Width="141" FontWeight="Bold" FontSize="20"/>
+        <Label Content="Novo E-mail:" HorizontalAlignment="Left" Margin="24,38,0,0" VerticalAlignment="Top" Height="31" Width="190" FontSize="18"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="28" Margin="24,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="16"/>
+        <Label Content="Nova Senha:" HorizontalAlignment="Left" Margin="374,39,0,0" VerticalAlignment="Top" Height="30" Width="190" FontSize="18"/>
+        <PasswordBox x:Name="pbPassword" Margin="374,74,278,350" Height="28" Width="200" FontSize="16"/>
+        
+        <Button x:Name="btnSave" Content="Salvar alterações" HorizontalAlignment="Left" Height="36" Margin="334,112,0,0" VerticalAlignment="Top" Width="192" Click="Button_Click"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="277" Margin="10,165,0,0" VerticalAlignment="Top" Width="832">
             <Button x:Name="btnSavePreference" Content="Salvar Preferências" HorizontalAlignment="Left" Height="21" Margin="355,245,0,0" VerticalAlignment="Top" Width="146"/>
         </Border>
         <Label Content="Alterar Preferências" HorizontalAlignment="Left" Height="34" Margin="357,165,0,0" VerticalAlignment="Top" Width="169" FontWeight="Bold" FontSize="16"/>
         <StackPanel x:Name="stpPreference" HorizontalAlignment="Left" Height="203" Margin="240,204,0,0" VerticalAlignment="Top" Width="380"/>
+        <Label x:Name="label1" Content="Confirmar Senha:" HorizontalAlignment="Left" Margin="628,38,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <PasswordBox x:Name="pbConfirmPass" HorizontalAlignment="Left" Margin="628,74,0,0" VerticalAlignment="Top" Width="200" Height="28" FontSize="16"/>
 
     </Grid>
 </Window>

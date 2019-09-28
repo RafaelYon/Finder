@@ -34,5 +34,7 @@ namespace Finder.Views
                 stpPreference.Children.Add(combox);
             }
         }
+
+
     }
 }
