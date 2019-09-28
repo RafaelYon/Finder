@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Finder.Views"
         mc:Ignorable="d"
-        Title="Login" Height="235" Width="260">
+        Title="Login" Height="223" Width="422" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Label x:Name="lblEmail" Content="Email:" HorizontalAlignment="Left" Margin="33,19,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="26" Margin="33,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
-        <Label x:Name="lblPassword" Content="Senha:" HorizontalAlignment="Left" Margin="33,81,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.039,-1.077"/>
-        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="33,112,0,0" VerticalAlignment="Top" Width="120" Height="26"/>
-        <Button x:Name="btnLogIn" Content="Entrar" HorizontalAlignment="Left" Margin="128,160,0,0" VerticalAlignment="Top" Width="75" Click="BtnLogIn_Click"/>
-        <Button x:Name="btnSingUp" Content="Cadastrar" HorizontalAlignment="Left" Margin="33,160,0,0" VerticalAlignment="Top" Width="75" Click="BtnSingUp_Click"/>
+        <Label x:Name="lblEmail" Content="Email:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="28" Margin="104,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="18" BorderThickness="0,0,0,1" BorderBrush="Black"/>
+        <Label x:Name="lblPassword" Content="Senha:" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.039,-1.077" FontSize="20"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="104,69,0,0" VerticalAlignment="Top" Width="200" Height="28" FontSize="18" BorderThickness="0,0,0,1" BorderBrush="Black"/>
+        <Button x:Name="btnLogIn" Content="Entrar" HorizontalAlignment="Left" Margin="229,146,0,0" VerticalAlignment="Top" Width="75" Click="BtnLogIn_Click" FontSize="20" Background="White" BorderBrush="Black"/>
+        <Button x:Name="btnSingUp" Content="Não tem uma conta? Clique aqui" HorizontalAlignment="Left" Margin="97,111,0,0" VerticalAlignment="Top" Width="207" Click="BtnSingUp_Click" FontSize="14" Background="White" BorderBrush="Black" BorderThickness="0" Foreground="#FF7367E6"/>
 
     </Grid>
 </Window>
