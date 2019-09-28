@@ -1,4 +1,5 @@
-﻿using Finder.Services;
+﻿using Finder.Helpers;
+using Finder.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,9 +31,7 @@ namespace Finder.Views
             try
             {
                 UserService.Login(txtEmail.Text, passwordBox.Password);
-                Recomendation asdf = new Recomendation();
-                asdf.Show();
-                this.Close();
+                Redirect(new Message());
             } catch (Exception exception)
             {
                 MessageBox.Show(exception.Message, "Falha ao entrar!", MessageBoxButton.OK, MessageBoxImage.Warning);

@@ -1,6 +1,7 @@
 ﻿using Finder.DAO;
 using Finder.Models;
 using Finder.Services;
+using System;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
@@ -64,6 +65,30 @@ namespace Finder.Views
 
             messages.Add(message);
             txtChat.Text = string.Empty;
+        }
+
+        private void btnProfile_Click(object sender, RoutedEventArgs e)
+        {           
+             Redirecter(new Profile());          
+        }
+
+        private void Redirecter(Window newWindow)
+        {
+            newWindow.Show();
+            this.Close();
+        }
+
+        private void BtnRecomendation_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Redirecter(new Recomendation());
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Preferências", MessageBoxButton.OK, MessageBoxImage.Information);
+                Redirecter(new Profile());
+            }
         }
     }
 }

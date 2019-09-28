@@ -16,21 +16,16 @@ namespace Finder.Views
         private User currentUser;
         private int index = 0;
         private UserRepository userRepository;
+
         public Recomendation()
         {
             userRepository = new UserRepository();
             InitializeComponent();
-            try
-            {
-                users = userRepository.GetUsersAvaliableToMatch(UserService.GetLoggedUser());
-                ChangeUserToRecomend();
-            } catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message, "Preferências", MessageBoxButton.OK, MessageBoxImage.Information);
-                Profile frmProfile = new Profile();
-                frmProfile.Show();
-                this.Close();
-            }            
+
+            users = userRepository.GetUsersAvaliableToMatch(UserService.GetLoggedUser());            
+
+            ChangeUserToRecomend();
+
         }
 
         private void ChangeUserToRecomend()
@@ -65,6 +60,12 @@ namespace Finder.Views
         private void BtnDecline_Click(object sender, RoutedEventArgs e)
         {
             ChangeUserToRecomend();
+        }
+
+        private void Redirect(Window newWindow)
+        {
+            newWindow.Show();
+            this.Close();
         }
     }
 }
