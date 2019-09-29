@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Finder.Views"
         mc:Ignorable="d"
-        Title="Profile" Height="480" Width="860" WindowStartupLocation="CenterScreen">
+        Title="Meu perfil" Height="480" Width="860" WindowStartupLocation="CenterScreen">
     <Grid Margin="0,0,0,-3">
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="150" Margin="10,10,0,0" VerticalAlignment="Top" Width="832">
             
         </Border>
         <Label Content="Alterar dados" HorizontalAlignment="Left" Height="34" Margin="372,10,0,0" VerticalAlignment="Top" Width="141" FontWeight="Bold" FontSize="20"/>
         <Label Content="Novo E-mail:" HorizontalAlignment="Left" Margin="24,38,0,0" VerticalAlignment="Top" Height="31" Width="190" FontSize="18"/>
-        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="28" Margin="24,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="16"/>
+        <TextBox x:Name="pbEmail" HorizontalAlignment="Left" Height="28" Margin="24,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="16"/>
         <Label Content="Nova Senha:" HorizontalAlignment="Left" Margin="374,39,0,0" VerticalAlignment="Top" Height="30" Width="190" FontSize="18"/>
         <PasswordBox x:Name="pbPassword" Margin="374,74,278,350" Height="28" Width="200" FontSize="16"/>
         

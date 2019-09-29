@@ -7,7 +7,7 @@ namespace Finder.Models
     public class PreferenceValue : Model
     {
 		[StringLength(150)]
-		[Index]
+		//[Index]
         public string Name { get; set; }
 
 		public virtual PreferenceType PreferenceType { get; set; }
@@ -39,7 +39,7 @@ namespace Finder.Models
 			return Equals(sameTypeObj);
 		}
 
-        public virtual string ToString()
+        public override string ToString()
         {
             return Name;
         }
