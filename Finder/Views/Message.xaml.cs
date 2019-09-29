@@ -90,5 +90,10 @@ namespace Finder.Views
                 Redirecter(new Profile());
             }
         }
+
+        private void BtnProfile_Click(object sender, RoutedEventArgs e)
+        {
+            Redirecter(new Profile());
+        }
     }
 }

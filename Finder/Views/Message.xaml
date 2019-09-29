@@ -16,7 +16,7 @@
         </Border>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="65" Margin="10,10,0,0" VerticalAlignment="Top" Width="224">
             <Grid>
-                <Button x:Name="btnProfile" Content="Perfil" Width="111" Margin="0,0,111,0" BorderThickness="0,0,1,0" FontSize="20" BorderBrush="Black" Background="#FF5F5F5F" Foreground="White"/>
+                <Button x:Name="btnProfile" Content="Perfil" Width="111" Margin="0,0,111,0" BorderThickness="0,0,1,0" FontSize="20" BorderBrush="Black" Background="#FF5F5F5F" Foreground="White" Click="BtnProfile_Click"/>
                 <Button x:Name="btnRecomendation" Content="Buscar" Margin="111,0,0,0" Width="111" BorderThickness="1,0,0,0" FontSize="20" BorderBrush="Black" Background="#FF5F5F5F" Foreground="White" Click="BtnRecomendation_Click"/>
             </Grid>
 

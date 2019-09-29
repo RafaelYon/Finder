@@ -1,4 +1,6 @@
 ﻿using Finder.DAO;
+using Finder.Services;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -35,6 +37,15 @@ namespace Finder.Views
             }
         }
 
-
+        private void BtnSave_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                UserService.UpdateUser(txtEmail.Text, pbPassword.Password, pbConfirmPass.Password);
+            } catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Alterar Dados", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+            }
+        }
     }
 }

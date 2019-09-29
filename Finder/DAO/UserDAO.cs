@@ -26,6 +26,17 @@ namespace Finder.DAO
 			return result;
 		}
 
+        public void FindNewEmail(string email)
+        {
+            var result = Context.Instance.Users.FirstOrDefault(x => x.Email.Equals(email));
+
+            if (result != null)
+            {
+                throw new Exception("Esse email já está cadastrado!\n" +
+                    "Tente outro email.");
+            }
+        }
+
 		public void Save(User model)
 		{
 			SaveModel(model);
