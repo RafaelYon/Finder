@@ -88,10 +88,5 @@ namespace Finder.Views
         {
             Redirecter(new Message());
         }
-
-        private void BtnSearch_Click(object sender, RoutedEventArgs e)
-        {
-            Redirecter(new Recomendation());
-        }
     }
 }
