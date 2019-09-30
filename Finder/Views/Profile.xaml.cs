@@ -42,10 +42,16 @@ namespace Finder.Views
             try
             {
                 UserService.UpdateUser(txtEmail.Text, pbPassword.Password, pbConfirmPass.Password);
+                MessageBox.Show("Alterado com sucesso!", "Alteração de Dados", MessageBoxButton.OK, MessageBoxImage.Information );
             } catch (Exception exception)
             {
                 MessageBox.Show(exception.Message, "Alterar Dados", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
+        }
+
+        private void BtnSavePreference_Click(object sender, RoutedEventArgs e)
+        {
+            UserService.
         }
     }
 }
