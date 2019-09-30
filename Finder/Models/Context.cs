@@ -25,6 +25,6 @@ namespace Finder.Models
 		public DbSet<Chat> Chats { get; set; }
         public DbSet<Message> Messages { get; set; }
 
-        public Context() : base("FinderDB") { }
-    }
+		public Context() : base("FinderDB") { }
+	}
 }
