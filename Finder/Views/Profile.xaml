@@ -9,7 +9,7 @@
     <Grid Margin="0,0,0,-3">
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="179" Margin="10,58,0,0" VerticalAlignment="Top" Width="832"/>
         <Label Content="Alterar dados" HorizontalAlignment="Left" Height="34" Margin="372,83,0,0" VerticalAlignment="Top" Width="141" FontWeight="Bold" FontSize="20"/>
-        <Label Content="Novo E-mail:" HorizontalAlignment="Left" Margin="24,127,0,0" VerticalAlignment="Top" Height="31" Width="190" FontSize="18"/>
+        <Label Content="Novo E-mail:" HorizontalAlignment="Left" Margin="24,122,0,0" VerticalAlignment="Top" Height="31" Width="190" FontSize="18"/>
         <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="28" Margin="24,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="16" BorderThickness="0,0,0,1"/>
         <Label Content="Nova Senha:" HorizontalAlignment="Left" Margin="364,122,0,0" VerticalAlignment="Top" Height="30" Width="190" FontSize="18"/>
         <PasswordBox x:Name="pbPassword" Margin="364,151,0,411" Height="28" Width="200" FontSize="16" BorderThickness="0,0,0,1" HorizontalAlignment="Left"/>
@@ -24,6 +24,8 @@
         <PasswordBox x:Name="pbConfirmPass" HorizontalAlignment="Left" Margin="628,151,0,0" VerticalAlignment="Top" Width="200" Height="28" FontSize="16" BorderThickness="0,0,0,1"/>
         <PasswordBox x:Name="pbOldPassword" HorizontalAlignment="Left" Margin="628,189,0,0" VerticalAlignment="Top" Width="200" Height="28" FontSize="16" BorderThickness="0,0,0,1"/>
         <Label Content="Confirmar Senha Antiga:" HorizontalAlignment="Left" Margin="364,189,0,0" VerticalAlignment="Top" Height="36" Width="208" FontSize="18"/>
+        <Button x:Name="btnMessage" Content="Voltar para mensagens" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="220" Height="34" Click="BtnMessage_Click"/>
+        <Button x:Name="btnSearch" Content="Ir para Buscas" HorizontalAlignment="Left" Margin="622,10,0,0" VerticalAlignment="Top" Width="220" Height="34" Click="BtnSearch_Click"/>
 
     </Grid>
 </Window>

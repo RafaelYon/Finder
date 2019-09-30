@@ -77,5 +77,21 @@ namespace Finder.Views
             pbPassword.Password = "";
             pbConfirmPass.Password = "";
         }
+
+        private void Redirecter(Window newWindow)
+        {
+            newWindow.Show();
+            this.Close();
+        }
+
+        private void BtnMessage_Click(object sender, RoutedEventArgs e)
+        {
+            Redirecter(new Message());
+        }
+
+        private void BtnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            Redirecter(new Recomendation());
+        }
     }
 }
