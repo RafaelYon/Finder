@@ -49,7 +49,7 @@ namespace Finder.Views
             }
 
             currentUser = users[index++].User;
-            txtName.Text = currentUser.Name;
+            lblNameValue.Content = currentUser.Name;
         }
 
         private void BtnMatch_Click(object sender, RoutedEventArgs e)

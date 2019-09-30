@@ -47,10 +47,11 @@ namespace Finder.Services
 
         public static void UpdateUser(string email, string password, string pass, string oldPassword)
         {
+            Validator.CheckEqualsOlderPassword(loggedUser.Password, oldPassword);
+
             if (!string.IsNullOrWhiteSpace(email))
             {
-                Validator.CheckIsValidEMail(email, "Email");
-                Validator.CheckEqualsOlderPassword(loggedUser.Password, oldPassword);
+                Validator.CheckIsValidEMail(email, "Email");                
                 UserDAO.FindNewEmail(email);
                 loggedUser.Email = email;
             }
