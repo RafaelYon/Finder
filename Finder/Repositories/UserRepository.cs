@@ -53,11 +53,13 @@ namespace Finder.Repositories
 			var excludeUserIds = string.Join(", ", usersIdsToExclude.Select(x => x.ToString()));
 
 			var result = Context.Instance.Database.SqlQuery<User>(
-				"SELECT [Users].[Id], [Users].[Name], [Users].[Email], [Users].[Password], [Users].[CreatedAt], [Users].[UpdatedAt] " +
+				"SELECT [Users].[Id], [Users].[Name], [Users].[Email], [Users].[Password], [Users].[CreatedAt], [Users].[UpdatedAt], " +
+				"[Users].[Born], [Users].[Genre] " +
 				"FROM [dbo].[Users] AS [Users] INNER JOIN [dbo].[PreferenceValueUsers] AS [Preferences] " +
 				"ON [Users].[Id] = [Preferences].[User_id] AND [Preferences].[PreferenceValue_Id] IN (" + preferencesValues + ") " +
 				"AND [Preferences].[User_id] NOT IN (" + excludeUserIds + ") " +
-				"GROUP BY [Users].[Id], [Users].[Name], [Users].[Email], [Users].[Password], [Users].[CreatedAt], [Users].[UpdatedAt] " +
+				"GROUP BY [Users].[Id], [Users].[Name], [Users].[Email], [Users].[Password], [Users].[CreatedAt], [Users].[UpdatedAt], " +
+				"[Users].[Born], [Users].[Genre] " +
 				"ORDER BY COUNT([Preferences].[PreferenceValue_Id]) DESC").ToList();
 
             return result;
