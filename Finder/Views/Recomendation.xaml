@@ -8,10 +8,10 @@
         Title="Recomendações" Height="300" Width="460">
     <Grid>
         <Label x:Name="label" Content="Principais recomendações" Width="452" Background="Black" Foreground="White" Height="77" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="28" Margin="132,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" BorderThickness="0,0,0,1" BorderBrush="Black"/>
         <Label x:Name="lblName" Content="Nome:" HorizontalAlignment="Left" Margin="10,82,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Button x:Name="btnMatch" Content="Gostei" HorizontalAlignment="Left" Margin="355,210,0,0" VerticalAlignment="Top" Width="77" Click="BtnMatch_Click" Height="49" FontSize="20"/>
         <Button x:Name="btnDecline" Content="Não Gostei" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top" Width="112" Click="BtnDecline_Click" Height="49" FontSize="20"/>
         <Button x:Name="btnMessage" Content="Mensagens" HorizontalAlignment="Left" Height="41" Margin="10,10,0,0" VerticalAlignment="Top" Width="71" Click="BtnMessage_Click"/>
+        <Label x:Name="lblNameValue" Content="" HorizontalAlignment="Left" Height="39" Margin="84,77,0,0" VerticalAlignment="Top" Width="317" FontSize="25"/>
     </Grid>
 </Window>
