@@ -23,24 +23,32 @@ namespace Finder.Views
             InitializeComponent();
 
             preferenceTypeDAO = new PreferenceTypeDAO();
+			preferenceValues = new List<ComboBox>();
 
-            foreach (var preferenceType in preferenceTypeDAO.GetAll())
-            {
-                var combox = new ComboBox()
-                {
-                    ItemsSource = preferenceType.Values,
-                    Text = preferenceType.Name
-                };
-                var label = new Label()
-                {
-                    Content = preferenceType.Name,
-                    FontSize = 14
-                };
-                stpPreference.Children.Add(label);
-                stpPreference.Children.Add(combox);
+			var userPreferences = UserService.GetLoggedUser().Preferences;
+
+			foreach (var preferenceType in preferenceTypeDAO.GetAll())
+			{
+				var combox = new ComboBox()
+				{
+					ItemsSource = preferenceType.Values,
+					Text = preferenceType.Name
+				};
+
+				combox.SelectedItem = userPreferences.Where(x => x.PreferenceType.Id == preferenceType.Id).FirstOrDefault();
+
+				var label = new Label()
+				{
+					Content = preferenceType.Name,
+					FontSize = 14
+				};
+
+
+				stpPreference.Children.Add(label);
+				stpPreference.Children.Add(combox);
 
 				preferenceValues.Add(combox);
-            }
+			}
         }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
