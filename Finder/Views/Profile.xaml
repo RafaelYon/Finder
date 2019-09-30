@@ -16,8 +16,8 @@
         <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="28" Margin="24,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="16" BorderThickness="0,0,0,1"/>
         <Label Content="Nova Senha:" HorizontalAlignment="Left" Margin="374,39,0,0" VerticalAlignment="Top" Height="30" Width="190" FontSize="18"/>
         <PasswordBox x:Name="pbPassword" Margin="374,74,278,350" Height="28" Width="200" FontSize="16" BorderThickness="0,0,0,1" HorizontalAlignment="Left"/>
-        
-        <Button x:Name="btnSave" Content="Salvar alterações" HorizontalAlignment="Left" Height="36" Margin="334,112,0,0" VerticalAlignment="Top" Width="192" Click="BtnSave_Click"/>
+
+        <Button x:Name="btnSave" Content="Salvar alterações" HorizontalAlignment="Left" Height="36" Margin="24,107,0,0" VerticalAlignment="Top" Width="234" Click="BtnSave_Click"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="277" Margin="10,165,0,0" VerticalAlignment="Top" Width="832">
             <Button x:Name="btnSavePreference" Content="Salvar Preferências" HorizontalAlignment="Left" Height="21" Margin="355,245,0,0" VerticalAlignment="Top" Width="146" Click="BtnSavePreference_Click"/>
         </Border>
@@ -25,6 +25,8 @@
         <StackPanel x:Name="stpPreference" HorizontalAlignment="Left" Height="203" Margin="240,204,0,0" VerticalAlignment="Top" Width="380"/>
         <Label x:Name="label1" Content="Confirmar Senha:" HorizontalAlignment="Left" Margin="628,38,0,0" VerticalAlignment="Top" FontSize="18"/>
         <PasswordBox x:Name="pbConfirmPass" HorizontalAlignment="Left" Margin="628,74,0,0" VerticalAlignment="Top" Width="200" Height="28" FontSize="16" BorderThickness="0,0,0,1"/>
+        <PasswordBox x:Name="pbOldPassword" HorizontalAlignment="Left" Margin="628,115,0,0" VerticalAlignment="Top" Width="200" Height="28" FontSize="16" BorderThickness="0,0,0,1"/>
+        <Label Content="Confirmar Senha Antiga:" HorizontalAlignment="Left" Margin="372,107,0,0" VerticalAlignment="Top" Height="36" Width="208" FontSize="18"/>
 
     </Grid>
 </Window>
