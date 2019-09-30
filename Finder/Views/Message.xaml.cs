@@ -80,15 +80,19 @@ namespace Finder.Views
 
         private void BtnRecomendation_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                Redirecter(new Recomendation());
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message, "Preferências", MessageBoxButton.OK, MessageBoxImage.Information);
-                Redirecter(new Profile());
-            }
+			try
+			{
+				Redirecter(new Recomendation());
+			}
+			catch (ArgumentException exception)
+			{
+				MessageBox.Show(exception.Message, "Preferências", MessageBoxButton.OK, MessageBoxImage.Information);
+				Redirecter(new Profile());
+			}
+			catch (Exception)
+			{
+				this.Close();
+			}
         }
 
         private void BtnProfile_Click(object sender, RoutedEventArgs e)

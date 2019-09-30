@@ -121,6 +121,7 @@
     <Compile Include="Models\Chat.cs" />
     <Compile Include="Models\Context.cs" />
     <Compile Include="Models\IUpdateAt.cs" />
+    <Compile Include="Models\Match.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Model.cs" />
     <Compile Include="Models\PreferenceType.cs" />

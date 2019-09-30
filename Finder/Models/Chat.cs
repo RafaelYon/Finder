@@ -10,6 +10,12 @@ namespace Finder.Models
 
         public virtual List<Message> Messages { get; set; }
 
+		public Chat()
+		{
+			Users = new List<User>();
+			Messages = new List<Message>();
+		}
+
 		public override int GetHashCode()
 		{
 			return Id;

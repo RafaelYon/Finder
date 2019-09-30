@@ -12,7 +12,7 @@ namespace Finder.Views
     /// </summary>
     public partial class Recomendation : Window
     {
-        private List<User> users;
+        private List<Match> users;
         private User currentUser;
         private int index = 0;
         private UserRepository userRepository;
@@ -36,6 +36,8 @@ namespace Finder.Views
             } catch (Exception exception)
             {
                 MessageBox.Show(exception.Message, "Recomendação", MessageBoxButton.OK, MessageBoxImage.Information);
+
+				Redirect(new Message());
             }
         }
 
@@ -46,7 +48,7 @@ namespace Finder.Views
                 throw new Exception("Não há mais recomendações!");
             }
 
-            currentUser = users[index++];
+            currentUser = users[index++].User;
             txtName.Text = currentUser.Name;
         }
 
