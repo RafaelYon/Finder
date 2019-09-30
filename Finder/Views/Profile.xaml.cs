@@ -41,7 +41,7 @@ namespace Finder.Views
         {
             try
             {
-                UserService.UpdateUser(txtEmail.Text, pbPassword.Password, pbConfirmPass.Password);
+                UserService.UpdateUser(txtEmail.Text, pbPassword.Password, pbConfirmPass.Password, pbOldPassword.Password);
                 MessageBox.Show("Alterado com sucesso!", "Alteração de Dados", MessageBoxButton.OK, MessageBoxImage.Information );
             } catch (Exception exception)
             {
@@ -51,7 +51,7 @@ namespace Finder.Views
 
         private void BtnSavePreference_Click(object sender, RoutedEventArgs e)
         {
-            UserService.
+            //UserService.
         }
 
         private void ClearFields()

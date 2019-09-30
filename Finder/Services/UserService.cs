@@ -45,11 +45,12 @@ namespace Finder.Services
             loggedUser = user;
         }
 
-        public static void UpdateUser(string email, string password, string pass)
+        public static void UpdateUser(string email, string password, string pass, string oldPassword)
         {
             if (!string.IsNullOrWhiteSpace(email))
             {
                 Validator.CheckIsValidEMail(email, "Email");
+                Validator.CheckEqualsOlderPassword(loggedUser.Password, oldPassword);
                 UserDAO.FindNewEmail(email);
                 loggedUser.Email = email;
             }

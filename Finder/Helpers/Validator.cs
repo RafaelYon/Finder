@@ -41,5 +41,10 @@ namespace Finder.Helpers
             if (!password.Equals(confirm))
                 throw new Exception("Senhas incompatíveis");
         }
+        public static void CheckEqualsOlderPassword(string password, string confirm)
+        {
+            if (!password.Equals(confirm))
+                throw new Exception("Senhas antiga está incorreta");
+        }
     }
 }
