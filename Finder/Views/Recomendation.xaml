@@ -12,5 +12,6 @@
         <Label x:Name="lblName" Content="Nome:" HorizontalAlignment="Left" Margin="10,82,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Button x:Name="btnMatch" Content="Gostei" HorizontalAlignment="Left" Margin="355,210,0,0" VerticalAlignment="Top" Width="77" Click="BtnMatch_Click" Height="49" FontSize="20"/>
         <Button x:Name="btnDecline" Content="Não Gostei" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top" Width="112" Click="BtnDecline_Click" Height="49" FontSize="20"/>
+        <Button x:Name="btnMessage" Content="Mensagens" HorizontalAlignment="Left" Height="41" Margin="10,10,0,0" VerticalAlignment="Top" Width="71" Click="BtnMessage_Click"/>
     </Grid>
 </Window>

@@ -69,6 +69,7 @@ namespace Finder.Views
 				.Select(x => x.SelectedItem as PreferenceValue)
 				.Where(x => x != null)
 				.ToArray());
+                MessageBox.Show("Salvo com sucesso!", "Preferências", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void ClearFields()

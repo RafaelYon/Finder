@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Finder.Views"
         mc:Ignorable="d"
-        Title="Meu perfil" Height="617.5" Width="860" WindowStartupLocation="CenterScreen">
+        Title="Meu perfil" Height="646.5" Width="860" WindowStartupLocation="CenterScreen">
     <Grid Margin="0,0,0,-3">
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="179" Margin="10,58,0,0" VerticalAlignment="Top" Width="832"/>
         <Label Content="Alterar dados" HorizontalAlignment="Left" Height="34" Margin="372,83,0,0" VerticalAlignment="Top" Width="141" FontWeight="Bold" FontSize="20"/>
@@ -15,11 +15,11 @@
         <PasswordBox x:Name="pbPassword" Margin="364,151,0,411" Height="28" Width="200" FontSize="16" BorderThickness="0,0,0,1" HorizontalAlignment="Left"/>
 
         <Button x:Name="btnSave" Content="Salvar alterações" HorizontalAlignment="Left" Height="36" Margin="24,189,0,0" VerticalAlignment="Top" Width="234" Click="BtnSave_Click"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="329" Margin="10,251,0,0" VerticalAlignment="Top" Width="832">
-            <Button x:Name="btnSavePreference" Content="Salvar Preferências" HorizontalAlignment="Left" Height="21" Margin="357,297,0,0" VerticalAlignment="Top" Width="146" Click="BtnSavePreference_Click"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="357" Margin="10,251,0,0" VerticalAlignment="Top" Width="832">
+            <Button x:Name="btnSavePreference" Content="Salvar Preferências" HorizontalAlignment="Left" Height="21" Margin="347,325,0,0" VerticalAlignment="Top" Width="146" Click="BtnSavePreference_Click"/>
         </Border>
         <Label Content="Alterar Preferências" HorizontalAlignment="Left" Height="34" Margin="344,254,0,0" VerticalAlignment="Top" Width="169" FontWeight="Bold" FontSize="16"/>
-        <StackPanel x:Name="stpPreference" HorizontalAlignment="Left" Height="250" Margin="241,288,0,0" VerticalAlignment="Top" Width="380"/>
+        <StackPanel x:Name="stpPreference" HorizontalAlignment="Left" Height="277" Margin="241,288,0,0" VerticalAlignment="Top" Width="380"/>
         <Label x:Name="label1" Content="Confirmar Senha:" HorizontalAlignment="Left" Margin="628,122,0,0" VerticalAlignment="Top" FontSize="18"/>
         <PasswordBox x:Name="pbConfirmPass" HorizontalAlignment="Left" Margin="628,151,0,0" VerticalAlignment="Top" Width="200" Height="28" FontSize="16" BorderThickness="0,0,0,1"/>
         <PasswordBox x:Name="pbOldPassword" HorizontalAlignment="Left" Margin="628,189,0,0" VerticalAlignment="Top" Width="200" Height="28" FontSize="16" BorderThickness="0,0,0,1"/>

@@ -67,5 +67,10 @@ namespace Finder.Views
             newWindow.Show();
             this.Close();
         }
+
+        private void BtnMessage_Click(object sender, RoutedEventArgs e)
+        {
+            Redirect(new Message());
+        }
     }
 }
