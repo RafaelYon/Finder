@@ -53,5 +53,12 @@ namespace Finder.Views
         {
             UserService.
         }
+
+        private void ClearFields()
+        {
+            txtEmail.Text = "";
+            pbPassword.Password = "";
+            pbConfirmPass.Password = "";
+        }
     }
 }

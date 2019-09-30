@@ -47,17 +47,21 @@ namespace Finder.Services
 
         public static void UpdateUser(string email, string password, string pass)
         {
-            Validator.CheckIsValidEMail(email, "Email");
-            Validator.CheckEqualsPassword(password, pass);
+            if (!string.IsNullOrWhiteSpace(email))
+            {
+                Validator.CheckIsValidEMail(email, "Email");
+                UserDAO.FindNewEmail(email);
+                loggedUser.Email = email;
+            }
 
-            UserDAO.FindNewEmail(email);
+            if (!string.IsNullOrWhiteSpace(password))
+            {
+                Validator.CheckEqualsPassword(password, pass);
+                loggedUser.Password = password;
+            }
 
-            loggedUser.Email = email;
-            loggedUser.Password = password;
-
-            UserDAO.Save(loggedUser);           
+            UserDAO.Save(loggedUser);
         }
-
         /// <summary>
         /// Obtém o usuário logado
         /// </summary>
