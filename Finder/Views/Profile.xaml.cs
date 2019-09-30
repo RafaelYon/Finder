@@ -1,6 +1,9 @@
 ﻿using Finder.DAO;
+using Finder.Models;
 using Finder.Services;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -13,12 +16,13 @@ namespace Finder.Views
     {
         private PreferenceTypeDAO preferenceTypeDAO;
 
+		private List<ComboBox> preferenceValues;
+
         public Profile()
         {
             InitializeComponent();
 
             preferenceTypeDAO = new PreferenceTypeDAO();
-
 
             foreach (var preferenceType in preferenceTypeDAO.GetAll())
             {
@@ -34,6 +38,8 @@ namespace Finder.Views
                 };
                 stpPreference.Children.Add(label);
                 stpPreference.Children.Add(combox);
+
+				preferenceValues.Add(combox);
             }
         }
 
@@ -51,7 +57,10 @@ namespace Finder.Views
 
         private void BtnSavePreference_Click(object sender, RoutedEventArgs e)
         {
-            UserService.
+			UserService.UpdateUserPreferences(preferenceValues
+				.Select(x => x.SelectedItem as PreferenceValue)
+				.Where(x => x != null)
+				.ToArray());
         }
 
         private void ClearFields()

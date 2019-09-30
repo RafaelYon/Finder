@@ -123,14 +123,14 @@ namespace Finder.Services
             }
         }
 
-        public static void RegisterPreferences(String cor, String filme, String musica, String animal, String personalidade)
-        {
-            Validator.CheckIsEmpty(cor, "Cor");
-            Validator.CheckIsEmpty(filme, "Filme");
-            Validator.CheckIsEmpty(musica, "Música");
-            Validator.CheckIsEmpty(animal, "Animal");
-            Validator.CheckIsEmpty(personalidade, "Personalidade");
+		public static void UpdateUserPreferences(PreferenceValue[] preferenceValues)
+		{
+			var user = GetLoggedUser();
+			user.Preferences.Clear();
 
-        }
-    }
+			user.Preferences.AddRange(preferenceValues);
+
+			UserDAO.Save(user);
+		}
+	}
 }
