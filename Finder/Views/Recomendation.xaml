@@ -5,13 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Finder.Views"
         mc:Ignorable="d"
-        Title="Recomendações" Height="300" Width="460">
+        Title="Recomendações" Height="445" Width="460">
     <Grid>
         <Label x:Name="label" Content="Principais recomendações" Width="452" Background="Black" Foreground="White" Height="77" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <Label x:Name="lblName" Content="Nome:" HorizontalAlignment="Left" Margin="10,82,0,0" VerticalAlignment="Top" FontSize="20"/>
-        <Button x:Name="btnMatch" Content="Gostei" HorizontalAlignment="Left" Margin="355,210,0,0" VerticalAlignment="Top" Width="77" Click="BtnMatch_Click" Height="49" FontSize="20"/>
-        <Button x:Name="btnDecline" Content="Não Gostei" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top" Width="112" Click="BtnDecline_Click" Height="49" FontSize="20"/>
+        <Button x:Name="btnMatch" Content="Gostei" HorizontalAlignment="Left" Margin="365,355,0,0" VerticalAlignment="Top" Width="77" Click="BtnMatch_Click" Height="49" FontSize="20"/>
+        <Button x:Name="btnDecline" Content="Não Gostei" HorizontalAlignment="Left" Margin="10,355,0,0" VerticalAlignment="Top" Width="112" Click="BtnDecline_Click" Height="49" FontSize="20"/>
         <Button x:Name="btnMessage" Content="Mensagens" HorizontalAlignment="Left" Height="41" Margin="10,10,0,0" VerticalAlignment="Top" Width="71" Click="BtnMessage_Click"/>
         <Label x:Name="lblNameValue" Content="" HorizontalAlignment="Left" Height="37" Margin="132,82,0,0" VerticalAlignment="Top" Width="300" FontSize="18" BorderThickness="0,0,0,1" Foreground="Black" BorderBrush="Black"/>
+        <Label x:Name="lblColor" Content="" HorizontalAlignment="Left" Margin="232,134,0,0" VerticalAlignment="Top" Width="200" BorderThickness="0,0,0,1" BorderBrush="Black"/>
+        <Label x:Name="lblName_Copy" Content="Cor:" HorizontalAlignment="Left" Margin="12,124,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="lblMusic" Content="" HorizontalAlignment="Left" Margin="232,174,0,0" VerticalAlignment="Top" Width="200" BorderThickness="0,0,0,1" BorderBrush="Black"/>
+        <Label x:Name="lbl" Content="Musica:" HorizontalAlignment="Left" Margin="12,164,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="lbasdfa" Content="Filme:" HorizontalAlignment="Left" Margin="10,206,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="lblMovie" Content="" HorizontalAlignment="Left" Margin="232,216,0,0" VerticalAlignment="Top" Width="200" BorderThickness="0,0,0,1" BorderBrush="Black"/>
+        <Label x:Name="lblAnimal" Content="" HorizontalAlignment="Left" Margin="232,258,0,0" VerticalAlignment="Top" Width="200" BorderThickness="0,0,0,1" BorderBrush="Black"/>
+        <Label x:Name="lbasdfa_Copy" Content="Animal:" HorizontalAlignment="Left" Margin="10,248,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="lbltop" Content="Personalidade:" HorizontalAlignment="Left" Margin="10,290,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="lblPersonality" Content="" HorizontalAlignment="Left" Margin="232,300,0,0" VerticalAlignment="Top" Width="200" BorderThickness="0,0,0,1" BorderBrush="Black"/>
     </Grid>
 </Window>

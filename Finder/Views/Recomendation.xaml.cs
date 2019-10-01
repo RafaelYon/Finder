@@ -13,6 +13,7 @@ namespace Finder.Views
     public partial class Recomendation : Window
     {
         private List<Match> users;
+        private List<PreferenceValue> preferences;
         private User currentUser;
         private int index = 0;
         private UserRepository userRepository;
@@ -23,9 +24,8 @@ namespace Finder.Views
             InitializeComponent();
 
             users = userRepository.GetUsersAvaliableToMatch(UserService.GetLoggedUser());            
-
             ChangeUserToRecomend();
-
+            
         }
 
         private void ChangeUserToRecomend()
@@ -47,9 +47,9 @@ namespace Finder.Views
             {
                 throw new Exception("Não há mais recomendações!");
             }
-
+            
             currentUser = users[index++].User;
-            lblNameValue.Content = currentUser.Name;
+            ChangePreferenceUserRecomended();
         }
 
         private void BtnMatch_Click(object sender, RoutedEventArgs e)
@@ -73,6 +73,23 @@ namespace Finder.Views
         private void BtnMessage_Click(object sender, RoutedEventArgs e)
         {
             Redirect(new Message());
+        }
+
+        private void ChangePreferenceUserRecomended()
+        {
+
+            lblNameValue.Content = currentUser.Name;
+            lblColor.Content = currentUser.Preferences[0];
+
+            if (currentUser.Preferences[1] == null)
+                lblMovie.Content = "";
+            else 
+                lblMovie.Content = currentUser.Preferences[1];
+
+            lblMusic.Content = currentUser.Preferences[2];            
+            lblAnimal.Content = currentUser.Preferences[3];
+            lblPersonality.Content = currentUser.Preferences[4];
+
         }
     }
 }
