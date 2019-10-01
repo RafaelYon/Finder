@@ -4,6 +4,7 @@ using Finder.Services;
 using System;
 using System.Collections.Generic;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace Finder.Views
 {
@@ -13,19 +14,21 @@ namespace Finder.Views
     public partial class Recomendation : Window
     {
         private List<Match> users;
-        private List<PreferenceValue> preferences;
+        //private List<PreferenceValue> preferences;
         private User currentUser;
         private int index = 0;
         private UserRepository userRepository;
+        private List<Label> labels;
+
 
         public Recomendation()
         {
             userRepository = new UserRepository();
             InitializeComponent();
-
+            labels = LabelSeed();
             users = userRepository.GetUsersAvaliableToMatch(UserService.GetLoggedUser());            
-            ChangeUserToRecomend();
-            
+            ChangeUserToRecomend();           
+
         }
 
         private void ChangeUserToRecomend()
@@ -76,20 +79,34 @@ namespace Finder.Views
         }
 
         private void ChangePreferenceUserRecomended()
-        {
-
+        {            
             lblNameValue.Content = currentUser.Name;
-            lblColor.Content = currentUser.Preferences[0];
+            ClearFields();
 
-            if (currentUser.Preferences[1] == null)
-                lblMovie.Content = "";
-            else 
-                lblMovie.Content = currentUser.Preferences[1];
+            for (int i = 0; i < currentUser.Preferences.Count; i++)
+            {                
+                labels[i].Content = currentUser.Preferences[i].Name;
+            }            
+        }
 
-            lblMusic.Content = currentUser.Preferences[2];            
-            lblAnimal.Content = currentUser.Preferences[3];
-            lblPersonality.Content = currentUser.Preferences[4];
+        private void ClearFields()
+        {
+            for (int i = 0; i < labels.Count; i++)
+            {
+                labels[i].Content = "";
+            }
+        }
 
+        private List<Label> LabelSeed()
+        {
+            return new List<Label>()
+            {
+                lblColor,
+                lblMovie,
+                lblMusic,
+                lblAnimal,
+                lblPersonality
+            };
         }
     }
 }
