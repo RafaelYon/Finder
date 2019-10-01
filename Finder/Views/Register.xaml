@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Finder.Views"
         mc:Ignorable="d"
-        Title="Cadastrar novo usuário" Height="371" Width="526" MaxHeight="500" MaxWidth="640" Background="White" WindowStartupLocation="CenterScreen">
+        Title="Cadastrar novo usuário" Height="371" Width="526" MaxHeight="371" MaxWidth="526" Background="White" WindowStartupLocation="CenterScreen">
     <Grid>
         <Label Content="Nome Completo:" HorizontalAlignment="Left" Margin="16,10,0,0" VerticalAlignment="Top" FontSize="20" VerticalContentAlignment="Center"/>
         <Label Content="E-Mail:" HorizontalAlignment="Left" Margin="16,52,0,0" VerticalAlignment="Top" FontSize="20" VerticalContentAlignment="Center" RenderTransformOrigin="0.595,0.177"/>

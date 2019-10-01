@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Finder.Views"
         mc:Ignorable="d"
-        Title="Recomendações" Height="445" Width="460">
+        Title="Recomendações" Height="445" Width="460" MaxHeight="445" MaxWidth="460">
     <Grid>
         <Label x:Name="label" Content="Principais recomendações" Width="452" Background="Black" Foreground="White" Height="77" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <Label x:Name="lblName" Content="Nome:" HorizontalAlignment="Left" Margin="10,82,0,0" VerticalAlignment="Top" FontSize="20"/>
