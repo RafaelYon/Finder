@@ -22,7 +22,7 @@ namespace Finder.Views
             try
             {
                 UserService.Register(txtName.Text, txtEmail.Text, txtPassword.Password, txtPass.Password, dpborn.SelectedDate, genre);
-                ViewRedirecter(new Profile());
+                ViewRedirecter(new Login());
             }
             catch (Exception exception)
             {

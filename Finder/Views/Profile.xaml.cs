@@ -89,5 +89,11 @@ namespace Finder.Views
         {
             Redirecter(new Message());
         }
+
+        private void BtnLogOff_Click(object sender, RoutedEventArgs e)
+        {
+            UserService.Loggout();
+            Redirecter(new Login());
+        }
     }
 }
