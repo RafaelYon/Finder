@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Finder.Views"
         mc:Ignorable="d"
-        Title="Caixa de mensagens" Height="640" Width="858" MaxWidth="858" MaxHeight="640" WindowStartupLocation="CenterScreen">
+        Title="Caixa de mensagens" Height="460" Width="860" MaxWidth="860" MaxHeight="460" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="61*"/>
